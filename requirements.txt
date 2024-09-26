@@ -1,4 +1,4 @@
 # On Windows: .venv\Scripts\activate
 Flask==2.0.1
 psycopg2-binary==2.9.3
-Werkzeug==0.16.1
+Werkzeug==2.0
