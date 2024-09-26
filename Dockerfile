@@ -1,12 +1,11 @@
 FROM ubuntu:latest
 
 # Install Python and PostgreSQL
-RUN apt-get update && apt-get install -y python3 python3-pip postgresql libpq-dev
+RUN apt-get update && apt-get install -y python3 python3-pip postgresql libpq-dev python3-venv  
 
-RUN pip3 install flask
+RUN python3 -m venv /opt/venv
 # Copy your Python script into the container
 COPY Backend.py /app/Backend.py
-RUN python3 -m venv /opt/venv
 
 # Activate the virtual environment and install dependencies from the requirements.txt file
 COPY requirements.txt /app/requirements.txt
