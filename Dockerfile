@@ -13,7 +13,7 @@ WORKDIR /app
 # Install any Python dependencies
 COPY requirements.txt /app/requirements.txt
 #RUN pip3 install -r requirements.txt
-RUN pip3 install python3-flask
+RUN apt install python3-flask
 # Expose the necessary ports
 EXPOSE 5432 5000
 
