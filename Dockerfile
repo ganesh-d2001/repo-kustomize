@@ -10,7 +10,7 @@ USER postgres
 ENV POSTGRES_USER =postgres
 ENV POSTGRES_PASSWORD=your_password
 ENV POSTGRES_DB=prod
-RUN su - postgres -c "psql -c 'CREATE User prod WITH PASSWORD 'prod';'"
+RUN su - postgres -c "psql -c \"CREATE USER prod WITH PASSWORD 'prod';\""
 RUN su - postgres -c "psql -c 'CREATE DATABASE prod;'"
 RUN Grant all privileges on database prod to prod;
 RUN python3 myscript.py
