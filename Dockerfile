@@ -1,12 +1,7 @@
 FROM ubuntu:latest
 
 # Install Python and PostgreSQL
-RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
-    postgresql \
-    libpq-dev \
-    flask
+RUN apt-get update && apt-get install -y python3 python3-pip postgresql libpq-dev flask
 
 # Copy your Python script into the container
 COPY Backend.py /app/Backend.py
