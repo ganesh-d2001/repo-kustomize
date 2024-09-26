@@ -6,7 +6,11 @@ RUN apt-get update && apt-get install -y python3 python3-pip postgresql libpq-de
 RUN pip3 install flask
 # Copy your Python script into the container
 COPY Backend.py /app/Backend.py
+RUN python3 -m venv /opt/venv
 
+# Activate the virtual environment and install dependencies from the requirements.txt file
+COPY requirements.txt /app/requirements.txt
+RUN /opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app/requirements.txt
 # Change to the working directory
 WORKDIR /app
 
