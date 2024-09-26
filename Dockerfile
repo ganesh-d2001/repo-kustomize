@@ -1,7 +1,8 @@
 FROM ubuntu:latest
 
 # Install Python and PostgreSQL
-RUN apt-get update && apt-get install -y python3 python3-pip postgresql libpq-dev python3-venv  
+RUN apt-get update && apt-get install -y python3 python3-pip postgresql libpq-dev python3-venv && apt-get clean \
+&& rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m venv /opt/venv
 # Copy your Python script into the container
