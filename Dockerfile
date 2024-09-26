@@ -24,8 +24,8 @@ COPY Backend.py /app/Backend.py
 WORKDIR /app
         
 # Install any Python dependencies (if you have a requirements.txt)
-# COPY requirements.txt /app/requirements.txt
-# RUN pip3 install -r requirements.txt
+COPY requirements.txt /app/requirements.txt
+RUN pip3 install -r requirements.txt
 
 EXPOSE 5432
 EXPOSE 5000
