@@ -25,7 +25,7 @@ WORKDIR /app
         
 # Install any Python dependencies (if you have a requirements.txt)
 COPY requirements.txt /app/requirements.txt
-RUN pip3 install -r requirements.txt
+#CMD service postgresql start && tail -f /dev/null
 
 EXPOSE 5432
 EXPOSE 5000
