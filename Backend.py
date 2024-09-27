@@ -51,6 +51,7 @@ def submit_data():
         name = data.get('name')
         address = data.get('address')
         interests = data.get('interests')
+        print(f"Incoming data: {data}")
 
         connection = connect_to_db()
         cursor = connection.cursor()
