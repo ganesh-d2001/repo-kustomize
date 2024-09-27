@@ -22,7 +22,10 @@ RUN /opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app
 
 # Change to the working directory
 WORKDIR /app
+RUN mkdir -p /app/logs
 
+
+WORKDIR /app
 # Expose ports for PostgreSQL and the Flask application
 EXPOSE 5432 5000
 
@@ -34,4 +37,4 @@ RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Use the virtual environment's Python interpreter to run the app
-CMD ["/opt/venv/bin/python", "/app/Backend.py"]
+CMD ["sh", "-c", "python3 /app/Backend.py > /app/logs/backend.log 2>&1","/opt/venv/bin/python", "/app/Backend.py"]
