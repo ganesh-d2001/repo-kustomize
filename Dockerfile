@@ -37,4 +37,7 @@ RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Use the virtual environment's Python interpreter to run the app
-CMD ["sh", "-c", "python3 /app/Backend.py > /app/logs/backend.log 2>&1","/opt/venv/bin/python", "/app/Backend.py"]
+#CMD ["sh", "-c", "python3 /app/Backend.py > /app/logs/backend.log 2>&1","/opt/venv/bin/python", "/app/Backend.py"]
+
+
+CMD ["sh", "-c", "/opt/venv/bin/python /app/Backend.py > /app/logs/backend.log 2>&1"]
