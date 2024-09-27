@@ -1,6 +1,7 @@
 import logging
 from flask import Flask, request, jsonify
 import psycopg2
+from flask_cors import CORS
 
 app = Flask(__name__)
 
@@ -71,6 +72,11 @@ def submit_data():
     except Exception as e:
         logging.error(f'Error inserting data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 400
+
+
+app = Flask(__name__)
+CORS(app)  # This will allow cross-origin requests for all routes
+
 
 if __name__ == '__main__':
     create_table()
