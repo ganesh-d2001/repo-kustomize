@@ -28,20 +28,29 @@
             const address = document.getElementById('address').value;
             const interests = document.getElementById('interests').value;
 
-            const response = await fetch('http://34.135.120.96:5000/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: name,
-                    address: address,
-                    interests: interests
-                })
-            });
+            try {
+                const response = await fetch('http://10.128.0.5:5000/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        address: address,
+                        interests: interests
+                    })
+                });
 
-            const result = await response.json();
-            alert(result.message);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                alert(result.message);
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
+                alert('There was an error submitting the form. Please try again.');
+            }
         });
     </script>
 </body>
