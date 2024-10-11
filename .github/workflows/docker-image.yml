@@ -7,21 +7,41 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker image 
+    
+    # Set up SSH to access the remote server
+    - name: Set up SSH
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan 34.135.120.96 >> ~/.ssh/known_hosts
-    - name: Execute deployment script via SSH
-      run: |
-        ssh -i ~/.ssh/id_ed25519 ganeshd@34.135.120.96 'bash -s' < ./your-script.sh
-        cd Implementation
+
+    # Build the Docker image
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag prod:$(date +%s)
+        docker build -t prod_data:1 .
+
+    # Save the Docker image as a tarball file
+    - name: Save Docker image to tarball
+      run: |
+        docker save prod_data:1 -o prod_data_image.tar
+
+    # Copy the tarball to the remote server via SSH
+    - name: Copy image to remote server
+      run: |
+        scp prod_data_image.tar ganeshd@34.135.120.96:/home/ganeshd/tarfiles/
+
+    # Load the Docker image on the remote server, remove existing container and image, and run the new image
+    - name: Load and run Docker image on remote server
+      run: |
+        ssh ganeshd@34.135.120.96 << 'EOF'
+          docker stop prod_container || true
+          docker rm prod_container || true
+          docker rmi prod_data:1 || true
+          docker load -i /home/ganeshd/tarfiles/prod_data_image.tar
+          docker run -d --name prod_container -p 5000:5000 -p 5432:5432 prod_data:1
+        EOF
