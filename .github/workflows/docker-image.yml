@@ -29,6 +29,3 @@ jobs:
       run: |
        docker images
        pwd
-    - name: Push Image to PROD
-      run: | 
-        docker push $image1
