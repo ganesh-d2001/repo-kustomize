@@ -20,7 +20,7 @@ jobs:
         ssh-keyscan 34.135.120.96 >> ~/.ssh/known_hosts
     - name: Execute deployment script via SSH
       run: |
-        ssh -i ~/.ssh/id_ed25519 ganeshd@34.135.120.96 'bash -s' < ./your-script.sh
+        ssh -i ~/.ssh/id_ed25519 ganeshd@34.135.120.96 'bash -s'
         cd Implementation
     - name: Build the Docker image
       run: |
