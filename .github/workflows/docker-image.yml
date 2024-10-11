@@ -38,7 +38,7 @@ jobs:
     # Load the Docker image on the remote server and run it
     - name: Load and run Docker image on remote server
       run: |
-        ssh prod@34.135.120.96 << 'EOF'
+        ssh ganeshd@34.135.120.96 << 'EOF'
           docker load -i /home/ganeshd/tarfiles/prod_data_image.tar
           docker run -d --name prod_container -p 80:80 prod_data:1
         EOF
