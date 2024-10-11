@@ -33,12 +33,12 @@ jobs:
     # Copy the tarball to the remote server via SSH
     - name: Copy image to remote server
       run: |
-        scp prod_data_image.tar prod@34.135.120.96:/home/ganeshd/tarfiles/
+        scp prod_data_image.tar prod@34.135.120.96:/home/ganeshd
 
     # Load the Docker image on the remote server and run it
     - name: Load and run Docker image on remote server
       run: |
         ssh prod@34.135.120.96 << 'EOF'
-          docker load -i /home/ganeshd/tarfiles/prod_data_image.tar
+          docker load -i /home/ganeshd/prod_data_image.tar
           docker run -d --name prod_container -p 80:80 prod_data:1
         EOF
