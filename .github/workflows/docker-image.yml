@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image 
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan 34.135.120.96 >> ~/.ssh/known_hosts
+    - name: Execute deployment script via SSH
+      run: |
+        ssh -i ~/.ssh/id_ed25519 ganeshd@34.135.120.96 'bash -s' < ./your-script.sh
+        cd Implementation
+    - name: Build the Docker image
+      run: |
+        docker build . --file Dockerfile --tag my-image-name:$(date +%s)
