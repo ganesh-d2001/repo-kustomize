@@ -23,4 +23,4 @@ jobs:
         ssh -i ~/.ssh/id_ed25519 ganeshd@34.135.120.96 'cd Implementation && bash -s'
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag prod:$(date +%s)
+        docker build . --file Dockerfile --tag myimage:$(date +%s)
