@@ -33,7 +33,7 @@ jobs:
     # Copy the tarball to the remote server via SSH
     - name: Copy image to remote server
       run: |
-        scp prod_data_image.tar ganeshd@34.135.120.96:/home/ganeshd/tarfiles/
+        scp prod_data_image.tar ganeshd@34.135.120.96:/home/ganeshd/Implementation/
 
     # Load the Docker image on the remote server, remove existing container and image, and run the new image
     - name: Load and run Docker image on remote server
@@ -42,6 +42,6 @@ jobs:
           docker stop prod_container || true
           docker rm prod_container || true
           docker rmi prod_data:1 || true
-          docker load -i /home/ganeshd/tarfiles/prod_data_image.tar
+          docker load -i /home/ganeshd/Implementation/prod_data_image.tar
           docker run -d --name prod_container -p 5000:5000 -p 5432:5432 prod_data:1
         EOF
