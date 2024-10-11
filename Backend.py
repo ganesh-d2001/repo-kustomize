@@ -53,22 +53,28 @@ def submit_data():
         name = data.get('name')
         address = data.get('address')
         interests = data.get('interests')
-        print(f"Incoming data: {data}")
+
+        logging.info(f"Received Data - Name: {name}, Address: {address}, Interests: {interests}")
 
         connection = connect_to_db()
+        logging.info("Database connection established.")
+        
         cursor = connection.cursor()
-
+        
         insert_query = """
         INSERT INTO people (name, address, interests)
         VALUES (%s, %s, %s)
         """
+        logging.info(f"Executing query: {insert_query} with values {name}, {address}, {interests}")
+        
         cursor.execute(insert_query, (name, address, interests))
         connection.commit()
-
+        
+        logging.info(f"Data inserted into database.")
+        
         cursor.close()
         connection.close()
 
-        logging.info(f'Data inserted: {name}, {address}, {interests}')
         return jsonify({"status": "success", "message": "Data inserted successfully!"}), 201
     except Exception as e:
         logging.error(f'Error inserting data: {str(e)}')
