@@ -20,7 +20,7 @@ jobs:
         ssh-keyscan 34.135.120.96 >> ~/.ssh/known_hosts
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag prod_data:1
+        docker build . --file Dockerfile --name prod_data:1
     - name: List the images
       run: |
        docker images
