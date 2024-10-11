@@ -1,15 +1,17 @@
-import logging
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS from flask_cors
+import logging
 import psycopg2
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Configure logging to log to a file
 logging.basicConfig(filename='/app/logs/backend.log', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Database connection parameters
-DB_HOST = 'localhost'  # or your Cloud SQL instance IP
+DB_HOST = 'localhost'
 DB_NAME = 'prod'
 DB_USER = 'prod'
 DB_PASSWORD = 'prod'
@@ -71,7 +73,6 @@ def submit_data():
     except Exception as e:
         logging.error(f'Error inserting data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 400
-
 
 if __name__ == '__main__':
     create_table()
