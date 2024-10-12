@@ -79,11 +79,15 @@ def fetch_people_data():
         cursor.close()
         connection.close()
 
+        if not people:  # Check if the data is empty
+            return jsonify({"status": "empty", "message": "No data available"}), 200
+
         people_list = [{"id": p[0], "name": p[1]} for p in people]
         return jsonify(people_list), 200
     except Exception as e:
         logging.error(f'Error fetching data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

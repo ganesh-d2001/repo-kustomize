@@ -6,8 +6,8 @@
     <title>People Data</title>
     <style>
         body {
-            background-color: #000; /* Black background */
-            color: #fff; /* White text */
+            background-color: #000;
+            color: #fff;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -15,94 +15,79 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            padding: 20px;
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        
+        h1 {
+            font-size: 2em;
+        }
+        
+        #peopleList {
             margin-top: 20px;
+            list-style: none;
+            padding: 0;
         }
 
-        th, td {
-            border: 1px solid #fff;
+        #peopleList li {
+            background-color: #333;
             padding: 10px;
-            text-align: left;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        th {
-            background-color: rgba(255, 255, 255, 0.1);
+        #peopleList li:hover {
+            background-color: #444;
         }
 
-        tr:nth-child(even) {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        .empty-message {
+            font-size: 1.2em;
+            color: #f00;
         }
     </style>
 </head>
 <body>
     <h1>People Data</h1>
-    <table id="peopleTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Interests</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Data will be inserted here -->
-        </tbody>
-    </table>
-    <a href="index.html">Back to Form</a> <!-- Link back to the form page -->
-    
+    <ul id="peopleList"></ul>
+
     <script>
-        async function fetchPeopleData() {
+        async function fetchPeople() {
             try {
-                const response = await fetch('http://34.135.120.96:5000/people');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+                const response = await fetch('/people');
+                const data = await response.json();
 
-                const result = await response.json();
-                if (result.status === 'success') {
-                    const tableBody = document.getElementById('peopleTable').getElementsByTagName('tbody')[0];
+                const peopleList = document.getElementById('peopleList');
+                peopleList.innerHTML = ''; // Clear the list
 
-                    result.data.forEach(person => {
-                        const row = tableBody.insertRow();
-                        row.insertCell(0).textContent = person.id;
-
-                        // Create a link for the person's name
-                        const nameCell = row.insertCell(1);
-                        const nameLink = document.createElement('a');
-                        nameLink.href = `person_detail.html?id=${person.id}`; // Link to the details page
-                        nameLink.textContent = person.name;
-                        nameCell.appendChild(nameLink);
-
-                        row.insertCell(2).textContent = person.address;
-                        row.insertCell(3).textContent = person.interests;
-                    });
+                if (data.status === "empty") {
+                    // Display message if no data is found
+                    const message = document.createElement('li');
+                    message.className = 'empty-message';
+                    message.textContent = 'No data available.';
+                    peopleList.appendChild(message);
                 } else {
-                    alert('Failed to fetch data');
+                    // Populate the list with people data
+                    data.forEach(person => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = person.name;
+                        listItem.addEventListener('click', () => {
+                            window.location.href = `/people/${person.id}`;
+                        });
+                        peopleList.appendChild(listItem);
+                    });
                 }
             } catch (error) {
-                console.error('There was a problem with your fetch operation:', error);
-                alert('Error fetching people data');
+                console.error('Error fetching people data:', error);
+                const message = document.createElement('li');
+                message.className = 'empty-message';
+                message.textContent = 'Error fetching data.';
+                document.getElementById('peopleList').appendChild(message);
             }
         }
 
-        // Fetch the data when the page loads
-        window.onload = fetchPeopleData;
+        // Fetch people data on page load
+        window.onload = fetchPeople;
     </script>
-<a href="Frontend.html">View People Data</a>
+    <a href="/frontend.html">Back to Home</a>
 </body>
 </html>
