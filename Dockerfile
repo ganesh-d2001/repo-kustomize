@@ -17,6 +17,7 @@ RUN python3 -m venv /opt/venv
 COPY Backend.py /app/Backend.py
 COPY requirements.txt /app/requirements.txt
 COPY static /app/static
+COPY templates /app/templates
 
 # Activate the virtual environment and install dependencies
 RUN /opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app/requirements.txt
