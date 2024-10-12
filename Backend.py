@@ -46,6 +46,12 @@ def serve_submission():
 def serve_people_data():
     return render_template('people_data.html')
 
+# Serve the person detail page
+@app.route('/person_detail.html')
+def serve_person_detail():
+    return render_template('person_detail.html')
+
+
 # Endpoint to handle form submission (POST)
 @app.route('/submit', methods=['POST'])
 def submit_data():

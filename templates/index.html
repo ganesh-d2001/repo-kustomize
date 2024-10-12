@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: url('{{ url_for('static', filename='devops.jpg') }}') no-repeat center center/cover;
+            background: url('/static/devops.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -71,8 +71,9 @@
     <p>Welcome to the world of DevOps tools. Manage and view people data effortlessly.</p>
     
     <div class="button-container">
-        <a href="{{ url_for('serve_submission') }}">Add People Data</a>
-        <a href="{{ url_for('serve_people_data') }}">View People Data</a>
+        <a href="/Frontend.html">Add People Data</a>
+        <a href="/people_data.html">View People Data</a>
+        <a href="/person_detail.html">View Person Detail</a>  <!-- Added Link -->
     </div>
 </body>
 </html>
