@@ -44,6 +44,7 @@
             font-size: 1.2em;
             color: #f00;
         }
+
     </style>
 </head>
 <body>
@@ -71,7 +72,8 @@
                         const listItem = document.createElement('li');
                         listItem.textContent = person.name;
                         listItem.addEventListener('click', () => {
-                            window.location.href = `/people/${person.id}`;
+                            window.location.href = `/person_detail.html?id=${person.id}`;
+
                         });
                         peopleList.appendChild(listItem);
                     });
@@ -88,6 +90,7 @@
         // Fetch people data on page load
         window.onload = fetchPeople;
     </script>
-    <a href="/Frontend.html">Back to Home</a>
+    <a href="/index.html">Back to Home</a>
+    <a href="/Frontend.html">Go to Addition of Data</a>
 </body>
 </html>

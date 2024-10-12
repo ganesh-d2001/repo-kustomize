@@ -113,6 +113,29 @@ def fetch_people_data():
     except Exception as e:
         logging.error(f'Error fetching data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
+    
+@app.route('/people/<int:person_id>', methods=['GET'])
+def fetch_person_detail(person_id):
+    try:
+        with connect_to_db() as connection:
+            with connection.cursor() as cursor:
+                cursor.execute("SELECT id, name, address, interests FROM people WHERE id = %s", (person_id,))
+                person = cursor.fetchone()
+
+        if not person:
+            return jsonify({"status": "error", "message": "Person not found"}), 404
+
+        person_detail = {
+            "id": person[0],
+            "name": person[1],
+            "address": person[2],
+            "interests": person[3]
+        }
+        return jsonify(person_detail), 200
+    except Exception as e:
+        logging.error(f'Error fetching person details: {str(e)}')
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

@@ -28,6 +28,9 @@
         a:hover {
             text-decoration: underline;
         }
+        .error-message {
+            color: #f00; /* Red color for error messages */
+        }
     </style>
 </head>
 <body>
@@ -41,28 +44,38 @@
         const personId = urlParams.get('id'); // Get the person ID from the URL
 
         async function fetchPersonDetails() {
+            const detailsDiv = document.getElementById('personDetails');
+            
+            // Check if personId exists in the URL
+            if (!personId) {
+                detailsDiv.innerHTML = '<p class="error-message">Error: Person ID is missing from the URL.</p>';
+                return;
+            }
+
             try {
                 const response = await fetch(`http://34.135.120.96:5000/people/${personId}`);
+                
+                // Check if response is OK
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`Error fetching data (status: ${response.status})`);
                 }
 
-                const result = await response.json();
-                if (result.status === 'success') {
-                    const person = result.data;
-                    const detailsDiv = document.getElementById('personDetails');
+                const person = await response.json();
+
+                // Check if the person was found
+                if (!person || person.status === 'error') {
+                    detailsDiv.innerHTML = `<p class="error-message">Error: ${person.message || 'Person not found'}</p>`;
+                } else {
                     detailsDiv.innerHTML = `
                         <p><strong>ID:</strong> ${person.id}</p>
                         <p><strong>Name:</strong> ${person.name}</p>
                         <p><strong>Address:</strong> ${person.address}</p>
                         <p><strong>Interests:</strong> ${person.interests}</p>
                     `;
-                } else {
-                    alert('Failed to fetch person details');
                 }
             } catch (error) {
                 console.error('There was a problem with your fetch operation:', error);
-                alert('Error fetching person details');
+                detailsDiv.innerHTML = '<p class="error-message">Error fetching person details.</p>';
             }
         }
 
