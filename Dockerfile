@@ -13,14 +13,15 @@ RUN apt-get update && apt-get install -y \
 # Create a virtual environment
 RUN python3 -m venv /opt/venv
 
-# Copy your Python script and requirements into the container
+# Copy your Python script, requirements, and static files into the container
 COPY Backend.py /app/Backend.py
 COPY requirements.txt /app/requirements.txt
+COPY static /app/static
 
 # Activate the virtual environment and install dependencies
 RUN /opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app/requirements.txt
 
-# Create necessary directories
+# Create necessary directories for logs
 RUN mkdir -p /app/logs
 
 # Set the working directory
@@ -37,5 +38,6 @@ RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 RUN chmod +x /app/Backend.py
+
 # CMD to run the Flask app
 CMD ["/opt/venv/bin/python", "/app/Backend.py"]
