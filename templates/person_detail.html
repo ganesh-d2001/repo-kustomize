@@ -21,24 +21,69 @@
             text-align: left;
             margin: 20px;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
         .error-message {
             color: #f00; /* Red color for error messages */
+        }
+        /* Search input styling */
+        .search-box {
+            margin-bottom: 20px;
+        }
+        .search-input {
+            padding: 10px;
+            width: 250px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        /* Link button styling */
+        .link-box {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .link-box a {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        .link-box a:hover {
+            background-color: #444;
         }
     </style>
 </head>
 <body>
     <h1>Person Details</h1>
+
+    <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search for a person..." />
+        <button class="search-button" onclick="searchPerson()">Search</button>
+    </div>
+
     <div class="details" id="personDetails"></div>
-    <a href="people_data.html">Back to People Data</a> <!-- Link back to the people data page -->
-    <a href="index.html">Back to Form</a> <!-- Link back to the form page -->
-    
+
+    <!-- Back and Home Links -->
+    <div class="link-box">
+        <a href="people_data.html">Back to People Data</a> <!-- Link back to the people data page -->
+        <a href="index.html">Back to Form</a> <!-- Link back to the form page -->
+        <a href="/">Back to Home</a> <!-- Link back to the homepage -->
+    </div>
+
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const personId = urlParams.get('id'); // Get the person ID from the URL
@@ -81,7 +126,40 @@
 
         // Fetch the person's details when the page loads
         window.onload = fetchPersonDetails;
+
+        // Search for a person by name
+        async function searchPerson() {
+            const searchInput = document.getElementById('searchInput').value;
+            if (!searchInput) {
+                alert('Please enter a name to search.');
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://34.135.120.96:5000/people/search?name=${encodeURIComponent(searchInput)}`);
+                
+                if (!response.ok) {
+                    throw new Error('Error fetching search results');
+                }
+
+                const person = await response.json();
+                const detailsDiv = document.getElementById('personDetails');
+
+                if (!person || person.status === 'error') {
+                    detailsDiv.innerHTML = `<p class="error-message">Error: ${person.message || 'Person not found'}</p>`;
+                } else {
+                    detailsDiv.innerHTML = `
+                        <p><strong>ID:</strong> ${person.id}</p>
+                        <p><strong>Name:</strong> ${person.name}</p>
+                        <p><strong>Address:</strong> ${person.address}</p>
+                        <p><strong>Interests:</strong> ${person.interests}</p>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error during search:', error);
+                alert('Error searching for person.');
+            }
+        }
     </script>
-<a href="/">Back to Home</a>
 </body>
 </html>

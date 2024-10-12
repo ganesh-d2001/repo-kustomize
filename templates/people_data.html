@@ -6,43 +6,73 @@
     <title>People Data</title>
     <style>
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
+            background-color: #1a1a1a; /* Darker background */
+            color: #e0e0e0; /* Light gray text for better readability */
+            font-family: 'Arial', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             height: 100vh;
             margin: 0;
+            padding: 20px;
         }
         
         h1 {
-            font-size: 2em;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f2f2f2;
+            text-align: center;
         }
-        
+
         #peopleList {
             margin-top: 20px;
             list-style: none;
             padding: 0;
+            width: 80%;
+            max-width: 600px;
         }
 
         #peopleList li {
             background-color: #333;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            font-size: 1.2em;
+            color: #f2f2f2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
         #peopleList li:hover {
             background-color: #444;
+            transform: scale(1.05);
         }
 
         .empty-message {
             font-size: 1.2em;
-            color: #f00;
+            color: #ff6b6b; /* Red color for error/empty messages */
+        }
+
+        .nav-links {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            background-color: #007bff; /* Button-like blue background */
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #0056b3;
         }
 
     </style>
@@ -50,6 +80,11 @@
 <body>
     <h1>People Data</h1>
     <ul id="peopleList"></ul>
+
+    <div class="nav-links">
+        <a href="/">Back to Home</a>
+        <a href="/Frontend.html">Add New Person</a>
+    </div>
 
     <script>
         async function fetchPeople() {
@@ -73,7 +108,6 @@
                         listItem.textContent = person.name;
                         listItem.addEventListener('click', () => {
                             window.location.href = `/person_detail.html?id=${person.id}`;
-
                         });
                         peopleList.appendChild(listItem);
                     });
@@ -90,7 +124,5 @@
         // Fetch people data on page load
         window.onload = fetchPeople;
     </script>
-    <a href="/">Back to Home</a>
-    <a href="/Frontend.html">Go to Addition of Data</a>
 </body>
 </html>

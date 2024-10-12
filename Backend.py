@@ -135,7 +135,24 @@ def fetch_person_detail(person_id):
     except Exception as e:
         logging.error(f'Error fetching person details: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
-
+    
+@app.route('/people/search', methods=['GET'])
+def search_people_by_name():
+    name = request.args.get('name')
+    try:
+        with connect_to_db() as connection:
+            with connection.cursor() as cursor:
+                search_query = "SELECT id, name, address, interests FROM people WHERE name ILIKE %s"
+                cursor.execute(search_query, (f'%{name}%',))
+                person = cursor.fetchone()
+        
+        if person:
+            return jsonify({"id": person[0], "name": person[1], "address": person[2], "interests": person[3]})
+        else:
+            return jsonify({"status": "error", "message": "Person not found"}), 404
+    except Exception as e:
+        logging.error(f'Error searching for person: {str(e)}')
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
