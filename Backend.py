@@ -1,10 +1,10 @@
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, render_template, url_for
 from flask_cors import CORS
 import logging
 import psycopg2
 import os
 
-app = Flask(__name__, static_folder='static')
+app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)  # Enable CORS for all routes
 
 # Database connection details
@@ -15,7 +15,10 @@ DB_PASSWORD = 'prod'
 DB_PORT = '5432'
 
 # Logging setup
-logging.basicConfig(filename='/app/logs/backend.log', level=logging.INFO, 
+log_directory = 'logs'
+if not os.path.exists(log_directory):
+    os.makedirs(log_directory)
+logging.basicConfig(filename=os.path.join(log_directory, 'backend.log'), level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 def connect_to_db():
@@ -31,17 +34,17 @@ def connect_to_db():
 # Serve the index (cover page) HTML file
 @app.route('/')
 def serve_index():
-    return send_from_directory(app.static_folder, 'index.html')
+    return render_template('index.html')
 
 # Serve the people submission form page
 @app.route('/Frontend.html')
 def serve_submission():
-    return send_from_directory(app.static_folder, 'Frontend.html')
+    return render_template('Frontend.html')
 
 # Serve the people data page
 @app.route('/people_data.html')
 def serve_people_data():
-    return send_from_directory(app.static_folder, 'people_data.html')
+    return render_template('people_data.html')
 
 # Endpoint to handle form submission (POST)
 @app.route('/submit', methods=['POST'])
@@ -87,7 +90,6 @@ def fetch_people_data():
     except Exception as e:
         logging.error(f'Error fetching data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
