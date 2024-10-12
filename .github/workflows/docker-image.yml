@@ -43,5 +43,12 @@ jobs:
           docker rm prod_container || true
           docker rmi prod_data:1 || true
           docker load -i /home/ganeshd/Implementation/prod_data_image.tar
-          docker run -d --name prod_container -p 5000:5000 -p 5432:5432 prod_data:1
+          
+          # Create a volume for PostgreSQL data if it doesn't exist
+          docker volume create pgdata_volume
+          
+          # Run the container with the volume mounted
+          docker run -d --name prod_container -p 5000:5000 -p 5432:5432 \
+            -v pgdata_volume:/var/lib/postgresql/data \
+            prod_data:1
         EOF
