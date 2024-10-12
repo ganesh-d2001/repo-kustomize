@@ -80,7 +80,14 @@
                     result.data.forEach(person => {
                         const row = tableBody.insertRow();
                         row.insertCell(0).textContent = person.id;
-                        row.insertCell(1).textContent = person.name;
+
+                        // Create a link for the person's name
+                        const nameCell = row.insertCell(1);
+                        const nameLink = document.createElement('a');
+                        nameLink.href = `person_detail.html?id=${person.id}`; // Link to the details page
+                        nameLink.textContent = person.name;
+                        nameCell.appendChild(nameLink);
+
                         row.insertCell(2).textContent = person.address;
                         row.insertCell(3).textContent = person.interests;
                     });

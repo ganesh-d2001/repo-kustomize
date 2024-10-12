@@ -80,28 +80,32 @@ def submit_data():
         logging.error(f'Error inserting data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 400
     
-@app.route('/people', methods=['GET'])
-def get_people_data():
+
+@app.route('/people/<int:person_id>', methods=['GET'])
+def get_person_detail(person_id):
     try:
         connection = connect_to_db()
         cursor = connection.cursor()
 
-        # Fetch all records from the people table
-        cursor.execute("SELECT * FROM people;")
-        people = cursor.fetchall()
+        # Fetch the person's details by ID
+        cursor.execute("SELECT * FROM people WHERE id = %s;", (person_id,))
+        person = cursor.fetchone()
 
         cursor.close()
         connection.close()
 
-        # Format the data as a list of dictionaries
-        people_list = [
-            {"id": person[0], "name": person[1], "address": person[2], "interests": person[3]}
-            for person in people
-        ]
-
-        return jsonify({"status": "success", "data": people_list}), 200
+        if person:
+            person_detail = {
+                "id": person[0],
+                "name": person[1],
+                "address": person[2],
+                "interests": person[3]
+            }
+            return jsonify({"status": "success", "data": person_detail}), 200
+        else:
+            return jsonify({"status": "error", "message": "Person not found"}), 404
     except Exception as e:
-        logging.error(f'Error fetching data: {str(e)}')
+        logging.error(f'Error fetching person details: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 400
 
 

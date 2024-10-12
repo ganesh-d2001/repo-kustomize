@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Details</title>
+    <style>
+        body {
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .details {
+            text-align: left;
+            margin: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Person Details</h1>
+    <div class="details" id="personDetails"></div>
+    <a href="people_data.html">Back to People Data</a> <!-- Link back to the people data page -->
+    <a href="index.html">Back to Form</a> <!-- Link back to the form page -->
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const personId = urlParams.get('id'); // Get the person ID from the URL
+
+        async function fetchPersonDetails() {
+            try {
+                const response = await fetch(`http://34.135.120.96:5000/people/${personId}`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                if (result.status === 'success') {
+                    const person = result.data;
+                    const detailsDiv = document.getElementById('personDetails');
+                    detailsDiv.innerHTML = `
+                        <p><strong>ID:</strong> ${person.id}</p>
+                        <p><strong>Name:</strong> ${person.name}</p>
+                        <p><strong>Address:</strong> ${person.address}</p>
+                        <p><strong>Interests:</strong> ${person.interests}</p>
+                    `;
+                } else {
+                    alert('Failed to fetch person details');
+                }
+            } catch (error) {
+                console.error('There was a problem with your fetch operation:', error);
+                alert('Error fetching person details');
+            }
+        }
+
+        // Fetch the person's details when the page loads
+        window.onload = fetchPersonDetails;
+    </script>
+</body>
+</html>
