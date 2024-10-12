@@ -20,24 +20,22 @@ COPY requirements.txt /app/requirements.txt
 # Activate the virtual environment and install dependencies
 RUN /opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app/requirements.txt
 
-# Change to the working directory
-WORKDIR /app
+# Create necessary directories
 RUN mkdir -p /app/logs
 
-
+# Set the working directory
 WORKDIR /app
-# Expose ports for PostgreSQL and the Flask application
+
+# Expose ports for PostgreSQL and Flask
 EXPOSE 5432 5000
 
 # Copy the entrypoint script
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
-# Use the entrypoint script to initialize and run services
+# Set the entrypoint to initialize services
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-# Use the virtual environment's Python interpreter to run the app
-#CMD ["sh", "-c", "python3 /app/Backend.py > /app/logs/backend.log 2>&1","/opt/venv/bin/python", "/app/Backend.py"]
-
-
-CMD ["sh", "-c", "/opt/venv/bin/python /app/Backend.py > /app/logs/backend.log 2>&1"]
+RUN chmod +x /app/Backend.py
+# CMD to run the Flask app
+CMD ["/opt/venv/bin/python", "/app/Backend.py"]
