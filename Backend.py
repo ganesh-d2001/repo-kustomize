@@ -79,6 +79,31 @@ def submit_data():
     except Exception as e:
         logging.error(f'Error inserting data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 400
+    
+@app.route('/people', methods=['GET'])
+def get_people_data():
+    try:
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        # Fetch all records from the people table
+        cursor.execute("SELECT * FROM people;")
+        people = cursor.fetchall()
+
+        cursor.close()
+        connection.close()
+
+        # Format the data as a list of dictionaries
+        people_list = [
+            {"id": person[0], "name": person[1], "address": person[2], "interests": person[3]}
+            for person in people
+        ]
+
+        return jsonify({"status": "success", "data": people_list}), 200
+    except Exception as e:
+        logging.error(f'Error fetching data: {str(e)}')
+        return jsonify({"status": "error", "message": str(e)}), 400
+
 
 if __name__ == '__main__':
     create_table()

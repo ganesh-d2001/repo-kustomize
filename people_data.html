@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Data</title>
+    <style>
+        body {
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #fff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>People Data</h1>
+    <table id="peopleTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Interests</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+    <a href="index.html">Back to Form</a> <!-- Link back to the form page -->
+    
+    <script>
+        async function fetchPeopleData() {
+            try {
+                const response = await fetch('http://34.135.120.96:5000/people');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                if (result.status === 'success') {
+                    const tableBody = document.getElementById('peopleTable').getElementsByTagName('tbody')[0];
+
+                    result.data.forEach(person => {
+                        const row = tableBody.insertRow();
+                        row.insertCell(0).textContent = person.id;
+                        row.insertCell(1).textContent = person.name;
+                        row.insertCell(2).textContent = person.address;
+                        row.insertCell(3).textContent = person.interests;
+                    });
+                } else {
+                    alert('Failed to fetch data');
+                }
+            } catch (error) {
+                console.error('There was a problem with your fetch operation:', error);
+                alert('Error fetching people data');
+            }
+        }
+
+        // Fetch the data when the page loads
+        window.onload = fetchPeopleData;
+    </script>
+</body>
+</html>
