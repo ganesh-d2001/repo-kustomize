@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template, url_for
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 import logging
 import psycopg2
@@ -18,18 +18,43 @@ DB_PORT = '5432'
 log_directory = 'logs'
 if not os.path.exists(log_directory):
     os.makedirs(log_directory)
-logging.basicConfig(filename=os.path.join(log_directory, 'backend.log'), level=logging.INFO, 
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+logging.basicConfig(
+    filename=os.path.join(log_directory, 'backend.log'), 
+    level=logging.INFO, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 def connect_to_db():
-    connection = psycopg2.connect(
+    """Establish a connection to the PostgreSQL database."""
+    return psycopg2.connect(
         host=DB_HOST,
         database=DB_NAME,
         user=DB_USER,
         password=DB_PASSWORD,
         port=DB_PORT
     )
-    return connection
+
+def create_people_table():
+    """Create the people table if it does not exist."""
+    try:
+        with connect_to_db() as connection:
+            with connection.cursor() as cursor:
+                create_table_query = """
+                CREATE TABLE IF NOT EXISTS people (
+                    id SERIAL PRIMARY KEY,
+                    name VARCHAR(100) NOT NULL,
+                    address TEXT,
+                    interests TEXT
+                );
+                """
+                cursor.execute(create_table_query)
+                logging.info("Table 'people' checked/created successfully.")
+    except Exception as e:
+        logging.error(f'Error creating table: {str(e)}')
+
+# Call this function when the app starts
+create_people_table()
 
 # Serve the index (cover page) HTML file
 @app.route('/')
@@ -51,7 +76,6 @@ def serve_people_data():
 def serve_person_detail():
     return render_template('person_detail.html')
 
-
 # Endpoint to handle form submission (POST)
 @app.route('/submit', methods=['POST'])
 def submit_data():
@@ -61,16 +85,12 @@ def submit_data():
         address = data.get('address')
         interests = data.get('interests')
 
-        connection = connect_to_db()
-        cursor = connection.cursor()
-        insert_query = "INSERT INTO people (name, address, interests) VALUES (%s, %s, %s)"
-        cursor.execute(insert_query, (name, address, interests))
-        connection.commit()
+        with connect_to_db() as connection:
+            with connection.cursor() as cursor:
+                insert_query = "INSERT INTO people (name, address, interests) VALUES (%s, %s, %s)"
+                cursor.execute(insert_query, (name, address, interests))
+                logging.info(f'Data inserted: {name}, {address}, {interests}')
 
-        cursor.close()
-        connection.close()
-
-        logging.info(f'Data inserted: {name}, {address}, {interests}')
         return jsonify({"status": "success", "message": "Data inserted successfully!"}), 201
     except Exception as e:
         logging.error(f'Error inserting data: {str(e)}')
@@ -80,13 +100,10 @@ def submit_data():
 @app.route('/people', methods=['GET'])
 def fetch_people_data():
     try:
-        connection = connect_to_db()
-        cursor = connection.cursor()
-        cursor.execute("SELECT id, name FROM people")
-        people = cursor.fetchall()
-
-        cursor.close()
-        connection.close()
+        with connect_to_db() as connection:
+            with connection.cursor() as cursor:
+                cursor.execute("SELECT id, name FROM people")
+                people = cursor.fetchall()
 
         if not people:  # Check if the data is empty
             return jsonify({"status": "empty", "message": "No data available"}), 200
