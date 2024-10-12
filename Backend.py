@@ -34,9 +34,9 @@ def serve_index():
     return send_from_directory(app.static_folder, 'index.html')
 
 # Serve the people submission form page
-@app.route('/data_submission.html')
+@app.route('/Frontend.html')
 def serve_submission():
-    return send_from_directory(app.static_folder, 'data_submission.html')
+    return send_from_directory(app.static_folder, 'Frontend.html')
 
 # Serve the people data page
 @app.route('/people_data.html')
