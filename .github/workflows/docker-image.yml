@@ -28,23 +28,23 @@ jobs:
     # Build the Docker image
     - name: Build the Docker image
       run: |
-        docker build -t prod_data:1 .
+        docker build -t prod_data:2 .
     # Tag the image for pushing to the private repository
     - name: Tag Docker image for private repo
       run: |
-        docker tag prod_data:1 docker.io/ganeshd2532/prod_data:1
+        docker tag prod_data:2 docker.io/ganeshd2532/prod_data:2
     # Push the image to the private Docker repository
     - name: Push Docker image to private repo
       run: |
-        docker push docker.io/ganeshd2532/prod_data:1
+        docker push docker.io/ganeshd2532/prod_data:2
     # Load the Docker image on the remote server, remove existing container and image, and run the new image
     - name: Load and run Docker image on remote server
       run: |
         ssh ganeshd@34.135.120.96 << 'EOF'
           docker stop prod_container || true
           docker rm prod_container || true
-          docker rmi prod_data:1 || true
-          docker pull docker.io/ganeshd2532/prod_data:1
+          docker rmi prod_data:2 || true
+          docker pull docker.io/ganeshd2532/prod_data:2
         EOF
     # Update the image in Kubernetes deployment
     - name: Update Kubernetes deployment
@@ -52,5 +52,5 @@ jobs:
         ssh ganeshd@34.135.120.96 << 'EOF'
           kubectl get pods
           kubectlget deployment
-          kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:1
+          kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:2
         EOF
