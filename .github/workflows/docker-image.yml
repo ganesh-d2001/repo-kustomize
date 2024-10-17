@@ -23,8 +23,8 @@ jobs:
     # Log in to Docker registry (replace 'docker.io' with your private registry URL)
     - name: Log in to Docker registry
       run: |
-        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username="${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
+        docker login --username="${{ secrets.DOCKER_USERNAME }}" --password="${{ secrets.DOCKER_PASSWORD }}"
+        
     # Build the Docker image
     - name: Build the Docker image
       run: |
