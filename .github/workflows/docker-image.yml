@@ -17,29 +17,57 @@ jobs:
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-      
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan 34.135.120.96 >> ~/.ssh/known_hosts
 
-    # Log in to Docker registry (replace 'docker.io' with your private registry URL)
+    # Log in to Docker registry
     - name: Log in to Docker registry
       run: |
         docker login --username="${{ secrets.DOCKERHUB_USERNAME }}" --password="${{ secrets.DOCKER_PASSWORD }}"
         
-    # Build the Docker image
+    # Fetch the current version from the VERSION file
+    - name: Read current version
+      id: get_version
+      run: |
+        if [ ! -f VERSION ]; then
+          echo "0" > VERSION
+        fi
+        VERSION=$(cat VERSION)
+        echo "Current version: $VERSION"
+        echo "::set-output name=current_version::$VERSION"
+
+    # Increment the version number
+    - name: Increment version
+      id: increment_version
+      run: |
+        NEW_VERSION=$(( ${{ steps.get_version.outputs.current_version }} + 1 ))
+        echo "New version: $NEW_VERSION"
+        echo $NEW_VERSION > VERSION
+        echo "::set-output name=new_version::$NEW_VERSION"
+        
+    # Commit the new version to the repository
+    - name: Commit new version
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add VERSION
+        git commit -m "Increment version to ${{ steps.increment_version.outputs.new_version }}"
+        git push
+
+    # Build the Docker image with the incremented version
     - name: Build the Docker image
       run: |
-        docker build -t prod_data:1 .
+        docker build -t prod_data:${{ steps.increment_version.outputs.new_version }} .
 
     # Tag the image for pushing to the private repository
     - name: Tag Docker image for private repo
       run: |
-        docker tag prod_data:1 docker.io/ganeshd2532/prod_data:1
+        docker tag prod_data:${{ steps.increment_version.outputs.new_version }} docker.io/ganeshd2532/prod_data:${{ steps.increment_version.outputs.new_version }}
 
     # Push the image to the private Docker repository
     - name: Push Docker image to private repo
       run: |
-        docker push docker.io/ganeshd2532/prod_data:1
+        docker push docker.io/ganeshd2532/prod_data:${{ steps.increment_version.outputs.new_version }}
 
     # Load the Docker image on the remote server, remove existing container and image, and run the new image
     - name: Load and run Docker image on remote server
@@ -47,8 +75,8 @@ jobs:
         ssh ganeshd@34.135.120.96 << 'EOF'
           docker stop prod_container || true
           docker rm prod_container || true
-          docker rmi prod_data:1 || true
-          docker pull docker.io/ganeshd2532/prod_data:1
+          docker rmi prod_data:${{ steps.increment_version.outputs.new_version }} || true
+          docker pull docker.io/ganeshd2532/prod_data:${{ steps.increment_version.outputs.new_version }}
         EOF
 
     # Update the image in Kubernetes deployment
@@ -56,6 +84,6 @@ jobs:
       run: |
         ssh ganeshd@34.135.120.96 << 'EOF'
           kubectl get pods
-          kubectlget deployment
-          kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:1
+          kubectl get deployment
+          kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:${{ steps.increment_version.outputs.new_version }}
         EOF
