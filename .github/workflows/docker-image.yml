@@ -41,16 +41,6 @@ jobs:
       run: |
         docker push docker.io/ganeshd2532/prod_data:1
 
-    # Save the Docker image as a tarball file
-    - name: Save Docker image to tarball
-      run: |
-        docker save prod_data:1 -o prod_data_image.tar
-
-    # Copy the tarball to the remote server via SSH
-    - name: Copy image to remote server
-      run: |
-        scp prod_data_image.tar ganeshd@34.135.120.96:/home/ganeshd/Implementation/
-
     # Load the Docker image on the remote server, remove existing container and image, and run the new image
     - name: Load and run Docker image on remote server
       run: |
@@ -58,7 +48,7 @@ jobs:
           docker stop prod_container || true
           docker rm prod_container || true
           docker rmi prod_data:1 || true
-          docker load -i /home/ganeshd/Implementation/prod_data_image.tar
+          docker pull docker.io/ganeshd2532/prod_data:1
         EOF
 
     # Update the image in Kubernetes deployment
