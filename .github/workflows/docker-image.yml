@@ -17,13 +17,14 @@ jobs:
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+      
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan 34.135.120.96 >> ~/.ssh/known_hosts
 
     # Log in to Docker registry (replace 'docker.io' with your private registry URL)
     - name: Log in to Docker registry
       run: |
-        docker login --username="${{ secrets.DOCKER_USERNAME }}" --password="${{ secrets.DOCKER_PASSWORD }}"
+        docker login --username="${{ secrets.DOCKERHUB_USERNAME }}" --password="${{ secrets.DOCKER_PASSWORD }}"
         
     # Build the Docker image
     - name: Build the Docker image
