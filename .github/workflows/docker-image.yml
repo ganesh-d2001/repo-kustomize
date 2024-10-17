@@ -55,5 +55,6 @@ jobs:
     - name: Update Kubernetes deployment
       run: |
         ssh ganeshd@34.135.120.96 << 'EOF'
+          sudo su
           kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:1
         EOF
