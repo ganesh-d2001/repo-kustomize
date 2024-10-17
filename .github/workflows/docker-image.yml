@@ -21,25 +21,30 @@ jobs:
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan 34.135.120.96 >> ~/.ssh/known_hosts
 
-    # Log in to Docker registry (replace 'docker.io' with your private registry URL)
+    # Generate a dynamic tag using the GitHub run number or commit SHA
+    - name: Generate Docker image tag
+      id: tag
+      run: echo "TAG=${{ github.sha }}" >> $GITHUB_ENV
+
+    # Log in to Docker registry
     - name: Log in to Docker registry
       run: |
         docker login --username="${{ secrets.DOCKERHUB_USERNAME }}" --password="${{ secrets.DOCKER_PASSWORD }}"
         
-    # Build the Docker image
+    # Build the Docker image with dynamic tag
     - name: Build the Docker image
       run: |
-        docker build -t prod_data:1 .
-
+        docker build -t prod_data:${{ env.TAG }} .
+    
     # Tag the image for pushing to the private repository
     - name: Tag Docker image for private repo
       run: |
-        docker tag prod_data:1 docker.io/ganeshd2532/prod_data:1
-
+        docker tag prod_data:${{ env.TAG }} docker.io/ganeshd2532/prod_data:${{ env.TAG }}
+    
     # Push the image to the private Docker repository
     - name: Push Docker image to private repo
       run: |
-        docker push docker.io/ganeshd2532/prod_data:1
+        docker push docker.io/ganeshd2532/prod_data:${{ env.TAG }}
 
     # Load the Docker image on the remote server, remove existing container and image, and run the new image
     - name: Load and run Docker image on remote server
@@ -47,13 +52,15 @@ jobs:
         ssh ganeshd@34.135.120.96 << 'EOF'
           docker stop prod_container || true
           docker rm prod_container || true
-          docker rmi prod_data:1 || true
-          docker pull docker.io/ganeshd2532/prod_data:1
+          docker rmi prod_data:${{ env.TAG }} || true
+          docker pull docker.io/ganeshd2532/prod_data:${{ env.TAG }}
         EOF
 
     # Update the image in Kubernetes deployment
     - name: Update Kubernetes deployment
       run: |
         ssh ganeshd@34.135.120.96 << 'EOF'
-          kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:1
+          kubectl get pods
+          kubectl get deployment
+          kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:${{ env.TAG }}
         EOF
