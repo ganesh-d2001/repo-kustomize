@@ -24,6 +24,7 @@ RUN /opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app
 
 # Create necessary directories for logs
 RUN mkdir -p /app/logs
+RUN mkdir -p /app/mount
 
 # Set the working directory
 WORKDIR /app
