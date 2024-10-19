@@ -62,6 +62,9 @@ jobs:
     - name: Update Kubernetes deployment
       run: |
         set -e
-        kubectl get pods
-        kubectl get deployment
+        cd Yaml-files
+        kubectl apply -f Storage1.yaml
+        kubectl apply -f PV.yaml
+        kubectl apply -f pvcpostgres.yaml
+        kubectl apply -f PostgreSQL StatefulSet.yml
         kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:${{ env.TAG }}
