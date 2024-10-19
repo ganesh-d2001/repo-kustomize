@@ -61,8 +61,6 @@ jobs:
     # Update the image in Kubernetes deployment
     - name: Update Kubernetes deployment
       run: |
-        set -e
-        cd Yaml-files
         kubectl apply -f Storage1.yaml
         kubectl apply -f PV.yaml
         kubectl apply -f pvcpostgres.yaml
