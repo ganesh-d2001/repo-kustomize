@@ -5,13 +5,14 @@ import psycopg2
 import os
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
-CORS(app)  # Enable CORS for all routes
+CORS(app)
 
-# Database connection details
-DB_HOST = 'localhost'
-DB_USER = 'postgres'
-DB_PASSWORD = 'Test@123'
-DB_PORT = '5432'
+# Fetch database connection details from environment variables
+DB_HOST = os.getenv('DB_HOST', 'postgresql-db-service')
+DB_USER = os.getenv('DB_USER', 'postgres')
+DB_PASSWORD = os.getenv('DB_PASSWORD', 'Test@123')
+DB_NAME = os.getenv('DB_NAME', 'prod')
+DB_PORT = os.getenv('DB_PORT', '5432')
 
 # Logging setup
 log_directory = 'logs'
@@ -30,21 +31,9 @@ def connect_to_db():
         host=DB_HOST,
         user=DB_USER,
         password=DB_PASSWORD,
+        dbname=DB_NAME,  # Added the dbname parameter
         port=DB_PORT
     )
-def create_database():
-    """Create the people table if it does not exist."""
-    try:
-        with connect_to_db() as connection:
-            with connection.cursor() as cursor:
-                create_table_query = """
-                CREATE DATABASE IF NOT EXISTS prod;
-                """
-                cursor.execute(create_table_query)
-                logging.info("Database PROD checked/created successfully.")
-    except Exception as e:
-        logging.error(f'Error creating PROD Database: {str(e)}')
-
 
 def create_people_table():
     """Create the people table if it does not exist."""
@@ -66,7 +55,6 @@ def create_people_table():
 
 # Call this function when the app starts
 create_people_table()
-create_database()
 
 # Serve the index (cover page) HTML file
 @app.route('/')
@@ -125,7 +113,8 @@ def fetch_people_data():
     except Exception as e:
         logging.error(f'Error fetching data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
-    
+
+# Fetch a person's detail
 @app.route('/people/<int:person_id>', methods=['GET'])
 def fetch_person_detail(person_id):
     try:
@@ -147,7 +136,8 @@ def fetch_person_detail(person_id):
     except Exception as e:
         logging.error(f'Error fetching person details: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
-    
+
+# Search for a person by name
 @app.route('/people/search', methods=['GET'])
 def search_people_by_name():
     name = request.args.get('name')
@@ -157,7 +147,7 @@ def search_people_by_name():
                 search_query = "SELECT id, name, address, interests FROM people WHERE name ILIKE %s"
                 cursor.execute(search_query, (f'%{name}%',))
                 person = cursor.fetchone()
-        
+
         if person:
             return jsonify({"id": person[0], "name": person[1], "address": person[2], "interests": person[3]})
         else:
