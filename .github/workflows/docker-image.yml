@@ -61,7 +61,7 @@ jobs:
     # Update the image in Kubernetes deployment
     - name: Update Kubernetes deployment
       run: |
-        k get pods
+        kubectl get pods
         pwd
         # kubectl apply -f Storage1.yaml
         # kubectl apply -f PV.yaml
