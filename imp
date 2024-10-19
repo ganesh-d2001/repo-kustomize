@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod-app
+  template:
+    metadata:
+      labels:
+        app: prod-app
+    spec:
+      containers:
+      - name: prod-container
+        image: YOUR_DOCKERHUB_USERNAME/prod_data:1
+        ports:
+        - containerPort: 5000
+		
+		
+docker login DOCKER_REGISTRY_SERVER --username=ganeshd2532 --password=dreancatcher@2001 --email=ganeshd@devtools.in
+
+
+kubectl create secret generic regcred \
+    --from-file=.dockerconfigjson= ~/.docker/config.json \
+    --type=kubernetes.io/dockerconfigjson
+	
+kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=ganeshd2532 --docker-password=dreancatcher@2001 --docker-email=ganeshd@devtools
+
+
+
+
+
+$ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+docker run --name postgres-database -e POSTGRES_PASSWORD=welcome123 -d postgres

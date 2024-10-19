@@ -4,7 +4,6 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
-    postgresql \
     libpq-dev \
     python3-venv \
     && apt-get clean \
@@ -14,10 +13,6 @@ RUN apt-get update && apt-get install -y \
 RUN python3 -m venv /opt/venv
 
 # Copy your Python script, requirements, and static files into the container
-COPY Backend.py /app/Backend.py
-COPY requirements.txt /app/requirements.txt
-COPY static /app/static
-COPY templates /app/templates
 
 # Activate the virtual environment and install dependencies
 RUN /opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install -r /app/requirements.txt
@@ -37,7 +32,6 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
 # Set the entrypoint to initialize services
-ENTRYPOINT ["/docker-entrypoint.sh"]
 
 RUN chmod +x /app/Backend.py
 
