@@ -10,7 +10,7 @@ CORS(app)
 # Fetch database connection details from environment variables
 DB_HOST = os.getenv('DB_HOST', 'postgresql-db-service')
 DB_USER = os.getenv('DB_USER', 'postgres')
-DB_PASSWORD = os.getenv('DB_PASSWORD', 'Test@123')
+POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'Test@123')
 DB_NAME = os.getenv('DB_NAME', 'prod')
 DB_PORT = os.getenv('DB_PORT', '5432')
 
@@ -30,7 +30,7 @@ def connect_to_db():
     return psycopg2.connect(
         host=DB_HOST,
         user=DB_USER,
-        password=DB_PASSWORD,
+        password=POSTGRES_PASSWORD,
         dbname=DB_NAME,  # Added the dbname parameter
         port=DB_PORT
     )

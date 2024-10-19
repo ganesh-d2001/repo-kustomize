@@ -1,0 +1,120 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod-app
+  template:
+    metadata:
+      labels:
+        app: prod-app
+    spec:
+      containers:
+      - name: prod-container
+        image: YOUR_DOCKERHUB_USERNAME/prod_data:1
+        ports:
+        - containerPort: 5000
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod-app
+  template:
+    metadata:
+      labels:
+        app: prod-app
+    spec:
+      containers:
+      - name: prod-container
+        image: YOUR_DOCKERHUB_USERNAME/prod_data:1
+        ports:
+        - containerPort: 5000
+
+
+
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: prod-ingress
+spec:
+  rules:
+  - host: prod-app.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: prod-ser
+            port:
+              number: 5000
+
+
+
+
+
+
+
+NAME           CLASS   HOSTS            ADDRESS        PORTS   AGE
+prod-ingress   nginx   prod-app.local   192.168.49.2   80      51m
+
+
+
+http://34.42.185.46:30428
+
+
+sudo vi /etc/nginx/sites-available/default
+
+
+
+
+
+upstream app_server {
+    server 192.168.49.2:30428;  # Minikube IP and NodePort
+}
+
+server {
+    listen 80;
+
+    location / {
+        proxy_pass http://app_server;  # Proxy to Minikube service
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+
+
+
+
+upstream app_server {
+    server 192.168.49.2:30428;  # Minikube IP and NodePort
+}
+
+server {
+    listen 80;
+
+    location / {
+        proxy_pass http://app_server;  # Proxy to Minikube service
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+
+
+6360077202
