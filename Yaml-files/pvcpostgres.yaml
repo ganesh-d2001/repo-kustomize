@@ -1,4 +1,4 @@
-apiVersion: v1                                                                      false                  4d15h
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: postgresql-db-disk

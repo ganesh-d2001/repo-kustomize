@@ -9,9 +9,8 @@ CORS(app)  # Enable CORS for all routes
 
 # Database connection details
 DB_HOST = 'localhost'
-DB_NAME = 'prod'
-DB_USER = 'prod'
-DB_PASSWORD = 'prod'
+DB_USER = 'postgres'
+DB_PASSWORD = 'Test@123'
 DB_PORT = '5432'
 
 # Logging setup
@@ -29,11 +28,23 @@ def connect_to_db():
     """Establish a connection to the PostgreSQL database."""
     return psycopg2.connect(
         host=DB_HOST,
-        database=DB_NAME,
         user=DB_USER,
         password=DB_PASSWORD,
         port=DB_PORT
     )
+def create_database():
+    """Create the people table if it does not exist."""
+    try:
+        with connect_to_db() as connection:
+            with connection.cursor() as cursor:
+                create_table_query = """
+                CREATE DATABASE IF NOT EXISTS prod;
+                """
+                cursor.execute(create_table_query)
+                logging.info("Database PROD checked/created successfully.")
+    except Exception as e:
+        logging.error(f'Error creating PROD Database: {str(e)}')
+
 
 def create_people_table():
     """Create the people table if it does not exist."""
@@ -55,6 +66,7 @@ def create_people_table():
 
 # Call this function when the app starts
 create_people_table()
+create_database()
 
 # Serve the index (cover page) HTML file
 @app.route('/')

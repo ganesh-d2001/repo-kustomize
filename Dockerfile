@@ -25,11 +25,9 @@ RUN mkdir -p /app/mount
 WORKDIR /app
 
 # Expose ports for PostgreSQL and Flask
-EXPOSE 5432 5000
+EXPOSE 5000
 
 # Copy the entrypoint script
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
 
 # Set the entrypoint to initialize services
 
