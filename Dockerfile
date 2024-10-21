@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     libpq-dev \
     python3-venv \
+    Flask-Limiter \
+    python3-distutilis \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
