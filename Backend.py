@@ -5,7 +5,7 @@ import psycopg2
 import os
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from packaging.version import Version  # Replacing LooseVersion
+from packaging.version import Version as LooseVersion
 
 app = Flask(__name__)
 limiter = Limiter(
