@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-# Install Python, PostgreSQL, and required dependencies
+# Install Python, PostgreSQL client libraries, and required dependencies
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
@@ -12,23 +12,23 @@ RUN apt-get update && apt-get install -y \
 # Create a virtual environment
 RUN python3 -m venv /opt/venv
 
+# Activate virtual environment by default
+ENV PATH="/opt/venv/bin:$PATH"
+
 # Set the working directory
 WORKDIR /app
 
 # Copy the requirements.txt file into the container
 COPY requirements.txt /app/
 
-# Activate the virtual environment and install dependencies
-RUN /opt/venv/bin/pip install --upgrade pip && /opt/venv/bin/pip install --no-cache-dir -r /app/requirements.txt
+# Install dependencies (including packaging for LooseVersion replacement)
+RUN pip install --upgrade pip && pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy the rest of the application into the container
 COPY . /app/
 
-# Expose ports for PostgreSQL and Flask
+# Expose port 5000 for Flask
 EXPOSE 5000
 
-# Set the entrypoint to initialize services
-RUN chmod +x /app/Backend.py
-
 # CMD to run the Flask app
-CMD ["/opt/venv/bin/python", "/app/Backend.py"]
+CMD ["python", "/app/Backend.py"]
