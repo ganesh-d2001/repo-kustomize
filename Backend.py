@@ -3,6 +3,16 @@ from flask_cors import CORS
 import logging
 import psycopg2
 import os
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+
+app = Flask(__name__)
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["200 per day", "50 per hour"],
+    storage_uri="memory://",
+)
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)
@@ -155,6 +165,15 @@ def search_people_by_name():
     except Exception as e:
         logging.error(f'Error searching for person: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
+    
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    return render_template('500.html'), 500
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
