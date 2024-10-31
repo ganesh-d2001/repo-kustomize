@@ -65,22 +65,22 @@ def create_people_table():
 create_people_table()
 
 # Serve the index (cover page) HTML file at /app
-@app.route('/')
+@app.route('/app')
 def serve_index():
     return render_template('index.html')
 
 # Serve the people submission form page at /app/Frontend.html
-@app.route('/Frontend.html')
+@app.route('/app/Frontend.html')
 def serve_submission():
     return render_template('Frontend.html')
 
 # Serve the people data page at /app/people_data.html
-@app.route('/people_data.html')
+@app.route('/app/people_data.html')
 def serve_people_data():
     return render_template('people_data.html')
 
 # Serve the person detail page at /app/person_detail.html
-@app.route('/person_detail.html')
+@app.route('/app/person_detail.html')
 def serve_person_detail():
     return render_template('person_detail.html')
 
