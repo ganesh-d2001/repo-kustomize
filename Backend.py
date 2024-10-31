@@ -73,22 +73,22 @@ def serve_index():
     return render_template('index.html')
 
 # Serve the people submission form page
-@app.route('/Frontend.html')
+@app.route('/app/Frontend.html')
 def serve_submission():
     return render_template('Frontend.html')
 
 # Serve the people data page
-@app.route('/people_data.html')
+@app.route('/app/people_data.html')
 def serve_people_data():
     return render_template('people_data.html')
 
 #Serve the person detail page
-@app.route('/person_detail.html')
+@app.route('/app/person_detail.html')
 def serve_person_detail():
     return render_template('person_detail.html')
 
 # Endpoint to handle form submission (POST)
-@app.route('/submit', methods=['POST'])
+@app.route('/app/submit', methods=['POST'])
 def submit_data():
     try:
         data = request.json
@@ -108,7 +108,7 @@ def submit_data():
         return jsonify({"status": "error", "message": str(e)}), 400
 
 # Endpoint to fetch people data
-@app.route('/people', methods=['GET'])
+@app.route('/app/people', methods=['GET'])
 def fetch_people_data():
     try:
         with connect_to_db() as connection:
@@ -126,7 +126,7 @@ def fetch_people_data():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 # Fetch a person's detail
-@app.route('/people/<int:person_id>', methods=['GET'])
+@app.route('/app/people/<int:person_id>', methods=['GET'])
 def fetch_person_detail(person_id):
     try:
         with connect_to_db() as connection:
@@ -149,7 +149,7 @@ def fetch_person_detail(person_id):
         return jsonify({"status": "error", "message": str(e)}), 500
 
 # Search for a person by name
-@app.route('/people/search', methods=['GET'])
+@app.route('/app/people/search', methods=['GET'])
 def search_people_by_name():
     name = request.args.get('name')
     try:
