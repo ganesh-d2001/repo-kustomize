@@ -15,7 +15,6 @@ limiter = Limiter(
     storage_uri="memory://",
 )
 
-app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)
 
 # Fetch database connection details from environment variables
@@ -42,7 +41,7 @@ def connect_to_db():
         host=DB_HOST,
         user=DB_USER,
         password=POSTGRES_PASSWORD,
-        dbname=DB_NAME,  # Added the dbname parameter
+        dbname=DB_NAME,
         port=DB_PORT
     )
 
@@ -82,7 +81,7 @@ def serve_submission():
 def serve_people_data():
     return render_template('people_data.html')
 
-#Serve the person detail page
+# Serve the person detail page
 @app.route('/app/person_detail.html')
 def serve_person_detail():
     return render_template('person_detail.html')
