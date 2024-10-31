@@ -5,7 +5,6 @@ import psycopg2
 import os
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from packaging.version import Version as LooseVersion
 
 app = Flask(__name__)
 limiter = Limiter(
@@ -67,7 +66,7 @@ def create_people_table():
 create_people_table()
 
 # Serve the index (cover page) HTML file
-@app.route('/app')
+@app.route('/app/')
 def serve_index():
     return render_template('index.html')
 
