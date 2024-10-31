@@ -82,14 +82,14 @@
     <ul id="peopleList"></ul>
 
     <div class="nav-links">
-        <a href="/Frontend.html">Add New Person</a>
-        <a href="/">Back to Home</a>
+        <a href="/app/Frontend.html">Add New Person</a>
+        <a href="/app">Back to Home</a>
     </div>
 
     <script>
         async function fetchPeople() {
             try {
-                const response = await fetch('/people');
+                const response = await fetch('/app/people');
                 const data = await response.json();
 
                 const peopleList = document.getElementById('peopleList');
@@ -107,7 +107,7 @@
                         const listItem = document.createElement('li');
                         listItem.textContent = person.name;
                         listItem.addEventListener('click', () => {
-                            window.location.href = `/person_detail.html?id=${person.id}`;
+                            window.location.href = `/app/person_detail.html?id=${person.id}`;
                         });
                         peopleList.appendChild(listItem);
                     });
