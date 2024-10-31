@@ -89,7 +89,7 @@
     <script>
         async function fetchPeople() {
             try {
-                const response = await fetch('/app/people');
+                const response = await fetch('/people');
                 const data = await response.json();
 
                 const peopleList = document.getElementById('peopleList');
@@ -107,7 +107,7 @@
                         const listItem = document.createElement('li');
                         listItem.textContent = person.name;
                         listItem.addEventListener('click', () => {
-                            window.location.href = `/app/person_detail.html?id=${person.id}`;
+                            window.location.href = `/person_detail.html?id=${person.id}`;
                         });
                         peopleList.appendChild(listItem);
                     });
