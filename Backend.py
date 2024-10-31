@@ -66,7 +66,7 @@ def create_people_table():
 create_people_table()
 
 # Serve the index (cover page) HTML file
-@app.route('/app/')
+@app.route('/app')
 def serve_index():
     return render_template('index.html')
 
@@ -174,4 +174,4 @@ def internal_error(error):
     return render_template('500.html'), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
