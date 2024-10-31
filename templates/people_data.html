@@ -107,7 +107,7 @@
                         const listItem = document.createElement('li');
                         listItem.textContent = person.name;
                         listItem.addEventListener('click', () => {
-                            window.location.href = `id=${person.id}`;
+                            window.location.href = `/person_detail.html?id=${person.id}`;
                         });
                         peopleList.appendChild(listItem);
                     });
