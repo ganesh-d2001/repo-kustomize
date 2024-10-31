@@ -83,9 +83,9 @@ def serve_people_data():
     return render_template('people_data.html')
 
 # Serve the person detail page
-@app.route('/person_detail.html')
-def serve_person_detail():
-    return render_template('person_detail.html')
+# @app.route('/person_detail.html')
+# def serve_person_detail():
+#     return render_template('person_detail.html')
 
 # Endpoint to handle form submission (POST)
 @app.route('/submit', methods=['POST'])
@@ -126,27 +126,27 @@ def fetch_people_data():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 # Fetch a person's detail
-@app.route('/people/<int:person_id>', methods=['GET'])
-def fetch_person_detail(person_id):
-    try:
-        with connect_to_db() as connection:
-            with connection.cursor() as cursor:
-                cursor.execute("SELECT id, name, address, interests FROM people WHERE id = %s", (person_id,))
-                person = cursor.fetchone()
+# @app.route('/people/<int:person_id>', methods=['GET'])
+# def fetch_person_detail(person_id):
+#     try:
+#         with connect_to_db() as connection:
+#             with connection.cursor() as cursor:
+#                 cursor.execute("SELECT id, name, address, interests FROM people WHERE id = %s", (person_id,))
+#                 person = cursor.fetchone()
 
-        if not person:
-            return jsonify({"status": "error", "message": "Person not found"}), 404
+#         if not person:
+#             return jsonify({"status": "error", "message": "Person not found"}), 404
 
-        person_detail = {
-            "id": person[0],
-            "name": person[1],
-            "address": person[2],
-            "interests": person[3]
-        }
-        return jsonify(person_detail), 200
-    except Exception as e:
-        logging.error(f'Error fetching person details: {str(e)}')
-        return jsonify({"status": "error", "message": str(e)}), 500
+#         person_detail = {
+#             "id": person[0],
+#             "name": person[1],
+#             "address": person[2],
+#             "interests": person[3]
+#         }
+#         return jsonify(person_detail), 200
+#     except Exception as e:
+#         logging.error(f'Error fetching person details: {str(e)}')
+#         return jsonify({"status": "error", "message": str(e)}), 500
 
 # Search for a person by name
 @app.route('/people/search', methods=['GET'])
