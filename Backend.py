@@ -85,7 +85,7 @@ def serve_person_detail():
     return render_template('person_detail.html')
 
 # Endpoint to handle form submission (POST) at /app/submit
-@app.route('/app/submit', methods=['POST'])
+@app.route('/submit', methods=['POST'])
 def submit_data():
     try:
         data = request.json
