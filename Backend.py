@@ -6,14 +6,13 @@ import os
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 limiter = Limiter(
     get_remote_address,
     app=app,
     default_limits=["200 per day", "50 per hour"],
     storage_uri="memory://",
 )
-
 CORS(app)
 
 # Fetch database connection details from environment variables
@@ -65,27 +64,32 @@ def create_people_table():
 # Call this function when the app starts
 create_people_table()
 
-# Serve the index (cover page) HTML file
+# Set root route to a different response
+@app.route('/')
+def root():
+    return "Welcome to the main page!"  # Change this to whatever you want
+
+# Serve the index (cover page) HTML file at /app
 @app.route('/app')
 def serve_index():
     return render_template('index.html')
 
-# Serve the people submission form page
+# Serve the people submission form page at /app/Frontend.html
 @app.route('/app/Frontend.html')
 def serve_submission():
     return render_template('Frontend.html')
 
-# Serve the people data page
+# Serve the people data page at /app/people_data.html
 @app.route('/app/people_data.html')
 def serve_people_data():
     return render_template('people_data.html')
 
-# Serve the person detail page
+# Serve the person detail page at /app/person_detail.html
 @app.route('/app/person_detail.html')
 def serve_person_detail():
     return render_template('person_detail.html')
 
-# Endpoint to handle form submission (POST)
+# Endpoint to handle form submission (POST) at /app/submit
 @app.route('/app/submit', methods=['POST'])
 def submit_data():
     try:
@@ -105,7 +109,7 @@ def submit_data():
         logging.error(f'Error inserting data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 400
 
-# Endpoint to fetch people data
+# Endpoint to fetch people data at /app/people
 @app.route('/app/people', methods=['GET'])
 def fetch_people_data():
     try:
@@ -123,7 +127,7 @@ def fetch_people_data():
         logging.error(f'Error fetching data: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
 
-# Fetch a person's detail
+# Fetch a person's detail at /app/people/<int:person_id>
 @app.route('/app/people/<int:person_id>', methods=['GET'])
 def fetch_person_detail(person_id):
     try:
@@ -146,7 +150,7 @@ def fetch_person_detail(person_id):
         logging.error(f'Error fetching person details: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
 
-# Search for a person by name
+# Search for a person by name at /app/people/search
 @app.route('/app/people/search', methods=['GET'])
 def search_people_by_name():
     name = request.args.get('name')
@@ -164,7 +168,7 @@ def search_people_by_name():
     except Exception as e:
         logging.error(f'Error searching for person: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
-    
+
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('404.html'), 404
@@ -174,4 +178,4 @@ def internal_error(error):
     return render_template('500.html'), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
