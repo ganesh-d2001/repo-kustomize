@@ -66,27 +66,27 @@ create_people_table()
 
 # Serve the index (cover page) HTML file at /app
 # Serve the index (cover page) HTML file at /
-@app.route('/app')
+@app.route('/')
 def serve_index():
     return render_template('index.html')
 
 # Serve the people submission form page at /app/Frontend.html
-@app.route('/app/Frontend.html')
+@app.route('/Frontend.html')
 def serve_submission():
     return render_template('Frontend.html')
 
 # Serve the people data page at /app/people_data.html
-@app.route('/app/people_data.html')
+@app.route('/people_data.html')
 def serve_people_data():
     return render_template('people_data.html')
 
 # Serve the person detail page at /app/person_detail.html
-@app.route('/app/person_detail.html')
+@app.route('/person_detail.html')
 def serve_person_detail():
     return render_template('person_detail.html')
 
 # Endpoint to handle form submission (POST) at /app/submit
-@app.route('/app/submit', methods=['POST'])
+@app.route('/submit', methods=['POST'])
 def submit_data():
     try:
         data = request.json
@@ -106,7 +106,7 @@ def submit_data():
         return jsonify({"status": "error", "message": str(e)}), 400
 
 # Endpoint to fetch people data at /app/people
-@app.route('/app/people', methods=['GET'])
+@app.route('/people', methods=['GET'])
 def fetch_people_data():
     try:
         with connect_to_db() as connection:
@@ -124,7 +124,7 @@ def fetch_people_data():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 # Fetch a person's detail at /app/people/<int:person_id>
-@app.route('/app/people/<int:person_id>', methods=['GET'])
+@app.route('/people/<int:person_id>', methods=['GET'])
 def fetch_person_detail(person_id):
     try:
         with connect_to_db() as connection:
@@ -147,7 +147,7 @@ def fetch_person_detail(person_id):
         return jsonify({"status": "error", "message": str(e)}), 500
 
 # Search for a person by name at /app/people/search
-@app.route('/app/people/search', methods=['GET'])
+@app.route('/people/search', methods=['GET'])
 def search_people_by_name():
     name = request.args.get('name')
     try:
