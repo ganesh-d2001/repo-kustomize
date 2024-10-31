@@ -65,7 +65,7 @@ def create_people_table():
 create_people_table()
 
 # Serve the index (cover page) HTML file at /app
-@app.route('/app')
+@app.route('/')
 def serve_index():
     return render_template('index.html')
 
