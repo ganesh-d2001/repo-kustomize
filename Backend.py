@@ -22,7 +22,7 @@ POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'Test@123')
 DB_NAME = os.getenv('DB_NAME', 'prod')
 DB_PORT = os.getenv('DB_PORT', '5432')
 
-# Logging setup
+# Logging
 log_directory = 'logs'
 if not os.path.exists(log_directory):
     os.makedirs(log_directory)
