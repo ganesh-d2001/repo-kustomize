@@ -12,10 +12,11 @@ job1:
     TAG_COMMIT: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
   script:
     - apt-get clean
-    - apt-get install -y openssh-server
+    - apt-get update
+    - apt-get install -y openssh-server openssh-client
     - echo "Building the app"
     - chmod og= $ID_RSA
-    - apk update && apk add openssh-client
+    - apt add openssh-client
     - ssh -i $pkey azureuser@$ip
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker image ls
