@@ -10,5 +10,5 @@ job1:
     - echo "Building the app"
     - apt-get update -y
     - su
-    - image ls
+    - docker image ls
       
