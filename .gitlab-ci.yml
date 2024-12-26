@@ -15,7 +15,7 @@ job1:
     - apt-get update
     - apt-get install -y openssh-server openssh-client
     - echo "Building the app"
-    - chmod og= $ID_RSA
+    - chmod og= $pkey
     - apt add openssh-client
     - ssh -i $pkey azureuser@$ip
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
