@@ -8,7 +8,7 @@ job1:
   stage: build
   script:
     - echo "Building the app"
-    - sudo apt-get update -y
-    - sudo su
-    - docker image ls
+    - apt-get update -y
+    - su
+    - image ls
       
