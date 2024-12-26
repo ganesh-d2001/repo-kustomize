@@ -13,7 +13,7 @@ job1:
   script:
     - apt-get clean
     - apt-get update
-    - apt-get install openssh-server
+    - apt-get install -y openssh-server
     - echo "Building the app"
     - ssh -i $pkey azureuser@$ip
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
