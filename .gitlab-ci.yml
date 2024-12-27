@@ -7,11 +7,17 @@ job1:
     - echo "Setting up SSH configuration"
     - ls -lsa
     - pwd
-    - mkdir -p ~/.ssh                         # Create the .ssh directory
-    - chmod 700 ~/.ssh                        # Set correct permissions
-    - chmod 600 $PKEY_FILE                    # Secure the private key file
-    - ssh-keyscan -H $ip >> ~/.ssh/known_hosts # Add the host key
-    - chmod 600 ~/.ssh/known_hosts            # Secure the known_hosts file
+    - mkdir -p ~/.ssh                         
+    - chmod 700 ~/.ssh                        
+    - chmod 600 $PKEY_FILE                    
+    - ssh-keyscan -H $ip >> ~/.ssh/known_hosts
+    - chmod 600 ~/.ssh/known_hosts            
     - echo "Connecting to $ip"
     - ssh -i $PKEY_FILE -T azureuser@$ip "docker image ls"
     - ssh -i $PKEY_FILE -T azureuser@$ip "docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY"
+    - ssh -i $PKEY_FILE -T azureuser@$ip "docker build . -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+    - ssh -i $PKEY_FILE -T azureuser@$ip "docker push docker.io/ganeshd2532/prod_data:$CI_COMMIT_SHA"
+    - ssh -i $PKEY_FILE -T azureuser@$ip "docker pull docker.io/ganeshd2532/prod_data:$CI_COMMIT_SHA"
+    - ssh -i $PKEY_FILE -T azureuser@$ip "docker run -d -p 5432:5432 5000:5000 80:80 docker.io/ganeshd2532/prod_data:$CI_COMMIT_SHA"
+    - echo "Build completed"
+# /builds/my-first-grp7622121/Implementation
