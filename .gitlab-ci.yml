@@ -5,6 +5,7 @@ job1:
     - apt-get install -y openssh-server openssh-client
     - echo "Building the app"
     - echo "Setting up SSH configuration"
+    - ls -lsa
     - mkdir -p ~/.ssh                         # Create the .ssh directory
     - chmod 700 ~/.ssh                        # Set correct permissions
     - chmod 600 $PKEY_FILE                    # Secure the private key file
