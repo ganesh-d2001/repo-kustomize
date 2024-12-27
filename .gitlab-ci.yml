@@ -6,6 +6,7 @@ job1:
     - echo "Building the app"
     - echo "Setting up SSH configuration"
     - ls -lsa
+    - pwd
     - mkdir -p ~/.ssh                         # Create the .ssh directory
     - chmod 700 ~/.ssh                        # Set correct permissions
     - chmod 600 $PKEY_FILE                    # Secure the private key file
