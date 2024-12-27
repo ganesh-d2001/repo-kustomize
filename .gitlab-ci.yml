@@ -2,6 +2,7 @@ job1:
   stage: build
   script:
     - apt-get update
+    - apt-get install docker.io -y
     - apt-get install -y openssh-server openssh-client
     - echo "Building the app"
     - echo "Setting up SSH configuration"
