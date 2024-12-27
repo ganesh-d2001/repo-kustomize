@@ -1,9 +1,9 @@
 image: ubuntu:20.04
+
 workflow:
   rules:
     - if: '$CI_COMMIT_BRANCH == "master"'
       when: always
-
 
 job1:
   stage: build
@@ -14,10 +14,7 @@ job1:
     - apt-get update
     - apt-get install -y openssh-server openssh-client
     - echo "Building the app"
-    - chmod og= $pkey
-    - cat $pkey
-    - cat $ip
-    - ssh -i $pkey -T azureuser@$ip
+    - echo "Connecting to $ip"
+    - ssh -i $PKEY_FILE -T azureuser@$ip
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker image ls
-
