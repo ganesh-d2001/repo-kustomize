@@ -15,8 +15,8 @@ job1:
     - apt-get install -y openssh-server openssh-client
     - echo "Building the app"
     - chmod og= $pkey
-    - cat $pkey
-    - ssh -i $pkey -T azureuser@$ip 
+    - cat $pkey $ip
+    - ssh -i $pkey -T azureuser@$172.210.57.9
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker image ls
     # test
