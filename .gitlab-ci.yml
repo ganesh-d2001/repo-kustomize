@@ -11,6 +11,6 @@ job1:
     - ssh-keyscan -H $ip >> ~/.ssh/known_hosts # Add the host key
     - chmod 600 ~/.ssh/known_hosts            # Secure the known_hosts file
     - echo "Connecting to $ip"
-    - ssh -i $PKEY_FILE -T azureuser@$ip
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker image ls
+    - ssh -i $PKEY_FILE -T azureuser@$ip "docker image ls"
+    - sudo su
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTR
