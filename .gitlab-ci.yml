@@ -16,7 +16,7 @@ job1:
     - echo "Building the app"
     - chmod og= $pkey
     - cat $pkey
-    - ssh -i -T $pkey azureuser@$ip 
+    - ssh -i $pkey -T azureuser@$ip 
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker image ls
     # test
