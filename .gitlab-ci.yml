@@ -23,7 +23,7 @@ job2:
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
   - echo "$PKEY_FILE" > ~/.ssh/id_rsa
-  - echo ~/.ssh/id_rsa
+  - cat ~/.ssh/id_rsa
   - chmod 600 ~/.ssh/id_rsa
   - ssh-keyscan -H $ip >> ~/.ssh/known_hosts
   - chmod 600 ~/.ssh/known_hosts
