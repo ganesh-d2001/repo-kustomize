@@ -30,14 +30,14 @@ job2:
   - echo "Setting up SSH configuration"
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
-  # - echo "$PKEY_FILE" > ~/.ssh/id_rsa
-  - cat <<< "${PKEY_FILE}" > ~/.ssh/id_rsa
+  - echo "$PKEY_FILE" > ~/.ssh/id_rsa
+  # - cat <<< "${PKEY_FILE}" > ~/.ssh/id_rsa
   - chmod 600 ~/.ssh/id_rsa
   - ssh-keyscan -H $ip >> ~/.ssh/known_hosts
   - chmod 600 ~/.ssh/known_hosts
 
   - echo "Testing SSH connection to $ip"
-   - echo "Running remote deployment commands"
+  - echo "Running remote deployment commands"
   - |
     ssh -i ~/.ssh/id_rsa -T azureuser@$ip <<EOF
       set -e  # Stop on error
