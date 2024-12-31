@@ -23,17 +23,19 @@ job2:
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
   - echo "$PKEY_FILE" > ~/.ssh/id_rsa
+  - echo ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
   - ssh-keyscan -H $ip >> ~/.ssh/known_hosts
   - chmod 600 ~/.ssh/known_hosts
   - echo "Testing SSH connection to $ip"
   - |
-    if ! ssh -i $PKEY_FILE azureuser@$ip "echo 'SSH connection successful'"; then
+    if ! ssh -i ~/.ssh/id_rsa azureuser@$ip "echo 'SSH connection successful'"; then
       echo "ERROR: SSH connection failed" >&2
       exit 255
     fi
   - echo "Running remote deployment commands"
   - |
-    ssh -i $PKEY_FILE -T azureuser@$ip <<EOF
+    ssh -i ~/.ssh/id_rsa -T azureuser@$ip <<EOF
       set -e
       echo "Logging into Docker registry"
       docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
