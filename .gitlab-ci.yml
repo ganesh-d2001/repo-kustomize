@@ -16,7 +16,7 @@ stages:
   - build
 
 job1:
-  stage: test
+  stage: docker-stuff
   script:
     - echo "Building Docker image"
     - docker build -t ganeshd2532/prod_data:$DOCKER_IMAGE .
@@ -31,20 +31,20 @@ job2:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - echo "$PKEY_FILE" > ~/.ssh/id_rsa
-    - chmod 600 ~/.ssh/id_rsa
+    - chmod 600 .ssh/id_rsa
     - ssh-keyscan -H $ip >> ~/.ssh/known_hosts
-    - chmod 600 ~/.ssh/known_hosts
+    - chmod 600 .ssh/known_hosts
 
     - echo "Testing SSH connection to $ip"
     - |
-      if ! ssh -i ~/.ssh/id_rsa -T azureuser@$ip "echo 'SSH connection successful'"; then
+      if ! ssh -i .ssh/id_rsa -T azureuser@$ip "echo 'SSH connection successful'"; then
         echo "ERROR: SSH connection failed" >&2
         exit 1
       fi
 
     - echo "Running remote deployment commands"
     - |
-      ssh -i ~/.ssh/id_rsa -T azureuser@$ip <<EOF
+      ssh -i .ssh/id_rsa -T azureuser@$ip <<EOF
         set -e
         echo "Logging into Docker registry"
         echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
