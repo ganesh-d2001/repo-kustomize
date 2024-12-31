@@ -16,7 +16,7 @@ stages:
   - build
 
 job1:
-  stage: docker-stuff
+  stage: test
   script:
     - echo "Building Docker image"
     - docker build -t ganeshd2532/prod_data:$DOCKER_IMAGE .
