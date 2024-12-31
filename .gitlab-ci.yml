@@ -19,7 +19,7 @@ job1:
   stage: test
   script:
     - echo "Building Docker image"
-    - docker build . -t $DOCKER_IMAGE
+    - docker build -t ganeshd2532/prod_data:$DOCKER_IMAGE .
     - echo "Logging into Docker Hub"
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
     - docker push ganeshd2532/prod_data:$DOCKER_IMAGE
