@@ -26,7 +26,7 @@ job2:
     - chmod 600 ~/.ssh/id_rsa
     - ssh-keyscan -H $ip >> ~/.ssh/known_hosts
     - echo "Connecting to remote server"
-    - ssh -i $PKEY_FILE -T azureuser@$ip <<EOF"
+    - ssh -i ~/.ssh/id_rsa -T azureuser@$ip <<EOF"
         docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
         docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
         docker container prune -f
