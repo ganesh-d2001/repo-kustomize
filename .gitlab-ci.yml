@@ -37,13 +37,7 @@ job2:
   - chmod 600 ~/.ssh/known_hosts
 
   - echo "Testing SSH connection to $ip"
-  - |
-    if ! ssh -i ~/.ssh/id_rsa -T azureuser@$ip "echo 'SSH connection successful'"; then
-      echo "ERROR: SSH connection failed" >&2
-      exit 1
-    fi
-
-  - echo "Running remote deployment commands"
+   - echo "Running remote deployment commands"
   - |
     ssh -i ~/.ssh/id_rsa -T azureuser@$ip <<EOF
       set -e  # Stop on error
