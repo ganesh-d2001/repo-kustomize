@@ -22,7 +22,7 @@ job1:
     - docker build . -t $DOCKER_IMAGE
     - echo "Logging into Docker Hub"
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin
-    - docker push $DOCKER_IMAGE
+    - docker push ganeshd2532/prod_data:$DOCKER_IMAGE
 
 job2:
   stage: build
