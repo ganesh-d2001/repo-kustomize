@@ -5,16 +5,24 @@ workflow:
     - if: '$CI_COMMIT_BRANCH == "master"'
       when: always
 
+services:
+  - docker:20.10-dind
+
+variables:
+  DOCKER_IMAGE: "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+
+stages:
+  - test
+  - build
+
 job1:
   stage: test
-  services:
-    - docker:20.10-dind
   script:
     - echo "Building Docker image"
-    - docker build . -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+    - docker build . -t $DOCKER_IMAGE
     - echo "Logging into Docker Hub"
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin
-    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+    - docker push $DOCKER_IMAGE
 
 job2:
   stage: build
@@ -22,7 +30,7 @@ job2:
     - echo "Setting up SSH configuration"
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - echo "$PKEY_FILE" > ~/.ssh/id_rsa  # Use the PKEY_FILE variable
+    - echo "$PKEY_FILE" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
     - ssh-keyscan -H $ip >> ~/.ssh/known_hosts
     - chmod 600 ~/.ssh/known_hosts
