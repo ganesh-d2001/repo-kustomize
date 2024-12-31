@@ -61,3 +61,4 @@ job2:
 
         echo "Deployment complete"
       EOF
+      echo "Deployment complete"
