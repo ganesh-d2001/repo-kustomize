@@ -8,7 +8,7 @@ job1:
   stage: test
   script:
     - apt-get update
-    - sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    - apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     - docker --version
     - docker build . -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
@@ -33,4 +33,4 @@ job2:
     - ssh -i $PKEY_FILE -T azureuser@$ip "docker pull docker.io/ganeshd2532/prod_data:$CI_COMMIT_SHA"
     - ssh -i $PKEY_FILE -T azureuser@$ip "docker run -d -p 5432:5432 5000:5000 80:80 docker.io/ganeshd2532/prod_data:$CI_COMMIT_SHA"
     - echo "Build completed"
-# /builds/my-first-grp7622121/Implementation
+# /builds/my-first-grp7622121/Implementationa
