@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-app-deployment
+  labels:
+    app: prod-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod-app
+  template:
+    metadata:
+      labels:
+        app: prod-app
+    spec:
+      containers:
+      - name: prod-app
+        image: ganeshd2532/prod_data:latest
+      imagePullSecrets:
+        - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prod-app-service
+spec:
+  type: NodePort
+  selector:
+    app: prod-app
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30001
