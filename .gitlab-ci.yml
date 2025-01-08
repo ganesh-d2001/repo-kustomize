@@ -10,10 +10,11 @@ services:
 
 variables:
   DOCKER_IMAGE: "${CI_COMMIT_SHA}"
+  DEPLOYMENT_FILE: "Yaml-files/prod-app.yaml" # Path to your Kubernetes deployment file
 
 stages:
   - test
-  - build
+  - deploy
 
 Docker_push:
   stage: test
@@ -23,6 +24,16 @@ Docker_push:
     - echo "Logging into Docker Hub"
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
     - docker push ganeshd2532/prod_data:$DOCKER_IMAGE
+
+Update_and_Deploy:
+  stage: deploy
+  script:
+    # Step 1: Update the Kubernetes deployment file with the new image tag
+    - echo "Updating deployment file with new Docker image tag"
+    - sed -i "s|image: ganeshd2532/prod_data:.*|image: ganeshd2532/prod_data:$DOCKER_IMAGE|g" $DEPLOYMENT_FILE
+  only:
+    - master
+
 
 # Docker_deploy:
 #   stage: build
