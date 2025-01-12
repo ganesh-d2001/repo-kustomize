@@ -26,7 +26,9 @@ stages:
 
 Update_Manifest:
   stage: update
+
   before_script:
+    - apk del openssh-client-default
     - apk add --no-cache git openssh
     - git config --global user.email "ganeshd@devtools.in"
     - git config --global user.name "ganeshd1"
