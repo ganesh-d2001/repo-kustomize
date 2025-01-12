@@ -2,7 +2,8 @@ image: docker:20.10
 
 workflow:
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master" && $CI_COMMIT_MESSAGE != "CI-generated commit:Updated image to ${DOCKER_IMAGE}"'
+    # Run the pipeline only for normal commits to master, not for CI-generated commits
+    - if: '$CI_COMMIT_BRANCH == "master" && $CI_COMMIT_MESSAGE !~ /CI-generated commit:Updated image to ${DOCKER_IMAGE}/'
       when: always
 
 services:
@@ -49,3 +50,5 @@ Update_Manifest:
 
   only:
     - master
+  except:
+    - $CI_COMMIT_MESSAGE =~ /CI-generated commit:Updated image to ${DOCKER_IMAGE}/
