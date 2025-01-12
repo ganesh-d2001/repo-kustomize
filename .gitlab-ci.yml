@@ -47,10 +47,10 @@ Update_Manifest:
       sed -i "s|image: ganeshd2532/prod_data:.*|image: ganeshd2532/prod_data:${DOCKER_IMAGE}|g" "${DEPLOYMENT_FILE}"
     - echo "Committing and pushing changes"
     - git add "${DEPLOYMENT_FILE}"
-    - git commit -m "Updated image to ${DOCKER_IMAGE}"
+    - git commit -m "CI-generated commit:Updated image to ${DOCKER_IMAGE}"
     - git push https://gitlab.com/my-first-grp7622121/Implementation.git
 
   only:
     - master
   except:
-    - $CI_COMMIT_MESSAGE =~ /main deployment/
+    - $CI_COMMIT_MESSAGE =~ /CI-generated commit/
