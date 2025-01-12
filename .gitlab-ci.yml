@@ -13,11 +13,11 @@ variables:
   DEPLOYMENT_FILE: "Yaml-files/prod-app.yaml" # Path to your Kubernetes deployment file
 
 stages:
-  - test
-  - deploy
+  - build
+  - update
 
 Docker_push:
-  stage: test
+  stage: build
   script:
     - echo "Building Docker image"
     - docker build -t ganeshd2532/prod_data:$DOCKER_IMAGE .
@@ -25,52 +25,25 @@ Docker_push:
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
     - docker push ganeshd2532/prod_data:$DOCKER_IMAGE
 
-Update_and_Deploy:
-  stage: deploy
+Update_Manifest:
+  stage: update
+  before_script:
+    # Setup Git config
+    - git config --global user.email "ganeshd@devtools.in"
+    - git config --global user.name "ganeshd1"
+
   script:
+    - echo "Cloning the application repository"
+    - git clone $REPO_URL
+    - cd "Yaml-files"  # Replace with the cloned repo folder name
+
     - echo "Updating deployment file with new Docker image tag"
-    - |
-      sed -i "s|image: ganeshd2532/prod_data:.*|image: ganeshd2532/prod_data:${DOCKER_IMAGE}|g" "$DEPLOYMENT_FILE"
-      echo "Updated deployment file:"
-    - cat "$DEPLOYMENT_FILE" # Output the updated file for debugging
-    # Optional: Apply the deployment to Kubernetes
-    # - echo "Applying Kubernetes deployment"
-    # - kubectl apply -f "$DEPLOYMENT_FILE"
+    - sed -i "s|image: ganeshd2532/prod_data:.*|image: $DOCKER_IMAGE|g" "$DEPLOYMENT_FILE"
+
+    - echo "Committing and pushing changes"
+    - git add "$DEPLOYMENT_FILE"
+    - git commit -m "Updated image to $DOCKER_IMAGE"
+    - git push origin master
+
   only:
     - master
-
-
-# Docker_deploy:
-#   stage: build
-#   script:
-#   - echo "Setting up SSH configuration"
-#   - mkdir -p ~/.ssh
-#   - chmod 700 ~/.ssh
-#   - echo "$PKEY_FILE" > ~/.ssh/id_rsa
-#   # - cat <<< "${PKEY_FILE}" > ~/.ssh/id_rsa
-#   - chmod 600 ~/.ssh/id_rsa
-#   - ssh-keyscan -H $ip >> ~/.ssh/known_hosts
-#   - chmod 600 ~/.ssh/known_hosts
-
-#   - echo "Testing SSH connection to $ip"
-#   - echo "Running remote deployment commands"
-#   - |
-#     ssh -i ~/.ssh/id_rsa -T azureuser@$ip <<EOF
-#       set -e  # Stop on error
-#       echo "Logging into Docker registry"
-#       echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
-
-#       echo "Pulling Docker image"
-#       docker pull ganeshd2532/prod_data:$CI_COMMIT_SHA
-
-#       echo "Pruning unused containers and images"
-#       docker container prune -f
-#       docker image prune -f
-
-#       echo "Running Docker container"
-#       docker run -d -p 5432:5432 -p 5000:5000 -p 80:80 ganeshd2532/prod_data:$CI_COMMIT_SHA
-
-#       echo "Deployment complete"
-#     EOF
-
-#   - echo "Deployment completed successfully"
