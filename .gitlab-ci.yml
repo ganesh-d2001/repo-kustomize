@@ -2,7 +2,7 @@ image: docker:20.10
 
 workflow:
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master"'
+    - if: '$CI_COMMIT_BRANCH == "master" && $CI_COMMIT_MESSAGE != "CI-generated commit:Updated image to ${DOCKER_IMAGE}"'
       when: always
 
 services:
@@ -25,18 +25,15 @@ Docker_push:
     - docker push ganeshd2532/prod_data:$DOCKER_IMAGE
 
 Update_Manifest:
-
   stage: update
   before_script:
-
     - apk add --no-cache git openssh-client
     - git config --global user.email "ganeshd@devtools.in"
     - git config --global user.name "ganeshd1"
     - git config --global url."https://ganeshd1:$CI_ACCESS_TOKEN@gitlab.com".insteadOf "https://gitlab.com"
-    
 
   script:
-    
+    # Clone the repository and update the image tag
     - echo "Cloning the application repository."
     - git clone https://gitlab.com/my-first-grp7622121/Implementation.git
     - cd Implementation/Yaml-files
@@ -52,5 +49,3 @@ Update_Manifest:
 
   only:
     - master
-  except:
-    - $CI_COMMIT_MESSAGE =~ /CI-generated commit/
