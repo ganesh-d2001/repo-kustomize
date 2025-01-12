@@ -32,7 +32,7 @@ Update_Manifest:
     - apk add --no-cache git openssh-client
     - git config --global user.email "ganeshd@devtools.in"
     - git config --global user.name "ganeshd1"
-    - git config --global url."https://ganeshd1 :$CI_ACCESS_TOKEN@gitlab.com".insteadOf "https://gitlab.com"
+    - git config --global url."https://ganeshd1:$CI_ACCESS_TOKEN@gitlab.com".insteadOf "https://gitlab.com"
     
 
   script:
