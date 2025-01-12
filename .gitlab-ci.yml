@@ -10,7 +10,6 @@ services:
 
 variables:
   DOCKER_IMAGE: "${CI_COMMIT_SHA}"
-  DEPLOYMENT_FILE: "Yaml-files/prod-app.yaml" # Path to your Kubernetes deployment file
 
 stages:
   - build
@@ -28,20 +27,25 @@ Docker_push:
 Update_Manifest:
   stage: update
   before_script:
-    # Setup Git config
+    - apk add --no-cache git openssh # Install git and SSH tools in the Docker environment
     - git config --global user.email "ganeshd@devtools.in"
     - git config --global user.name "ganeshd1"
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+    - chmod 600 ~/.ssh/known_hosts
 
   script:
+  |
     - echo "Cloning the application repository"
-    - git clone $REPO_URL
-    - cd "Yaml-files"  # Replace with the cloned repo folder name
+    - git clone $REPO_URL repo
+    - cd repo
     - echo "Updating deployment file with new Docker image tag"
-    - |
-      sed -i "s|image: ganeshd2532/prod_data:.*|image: ganeshd2532/prod_data:${DOCKER_IMAGE}|g" "${DEPLOYMENT_FILE}
+    - sed -i "s|image: ganeshd2532/prod_data:.*|image: ganeshd2532/prod_data:${DOCKER_IMAGE}|g" "${DEPLOYMENT_FILE}"
     - echo "Committing and pushing changes"
-    - git add "$DEPLOYMENT_FILE"
-    - git commit -m "Updated image to $DOCKER_IMAGE"
+    - git add "${DEPLOYMENT_FILE}"
+    - git commit -m "Updated image to ${DOCKER_IMAGE}"
     - git push origin master
 
   only:
