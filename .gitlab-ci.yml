@@ -41,6 +41,7 @@ Update_Manifest:
 
     - echo "Cloning the application repository"
     - git clone $CI_REPOSITORY_URL 
+    - git checkout master
     - cd Yaml-files
     - echo "Updating deployment file with new Docker image tag"
     - |
@@ -49,6 +50,7 @@ Update_Manifest:
     - echo "Committing and pushing changes"
     - git add "${DEPLOYMENT_FILE}"
     - git commit -m "Updated image to ${DOCKER_IMAGE}"
+    - git branch 
     - git push origin master
 
   only:
