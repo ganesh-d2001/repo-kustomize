@@ -28,8 +28,7 @@ Update_Manifest:
   stage: update
 
   before_script:
-    - apk del openssh-client-default
-    - apk add --no-cache git openssh
+    - apk add --no-cache git openssh-client=9.3_p1-r3 openssh-client-common=9.3_p1-r3
     - git config --global user.email "ganeshd@devtools.in"
     - git config --global user.name "ganeshd1"
     - mkdir -p ~/.ssh
