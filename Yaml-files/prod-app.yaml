@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: prod-app
-        image: ganeshd2532/prod_data:4f0ae475ce2aa06bc81a440ceea1a8ed64071131
+        image: ganeshd2532/prod_data:2e22261a7c706021493f4af74b9e4286c351227b
       imagePullSecrets:
         - name: regcred
 ---
