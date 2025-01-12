@@ -46,10 +46,3 @@ Update_Manifest:
 
   only:
     - master
-
-Update_and_Deploy:
-  stage: deploy
-  script:
-    
-  only:
-    - master
