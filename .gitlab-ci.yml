@@ -36,7 +36,8 @@ Update_Manifest:
     
 
   script:
-    - echo "Cloning the application repository"
+    
+    - echo "Cloning the application repository."
     - git clone https://gitlab.com/my-first-grp7622121/Implementation.git
     - cd Implementation/Yaml-files
     - git checkout master
@@ -52,4 +53,4 @@ Update_Manifest:
   only:
     - master
   except:
-    - $CI_COMMIT_MESSAGE =~ /CI-generated commit/
+    - $CI_COMMIT_MESSAGE =~ /main deployment/
