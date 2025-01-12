@@ -51,3 +51,5 @@ Update_Manifest:
 
   only:
     - master
+  except:
+    - $CI_COMMIT_MESSAGE =~ /CI-generated commit/
