@@ -38,7 +38,7 @@ Update_Manifest:
     - cd "Yaml-files"  # Replace with the cloned repo folder name
 
     - echo "Updating deployment file with new Docker image tag"
-    - sed -i "s|image: ganeshd2532/prod_data:.*|image: $DOCKER_IMAGE|g" "$DEPLOYMENT_FILE"
+    - sed -i 's|image: ganeshd2532/prod_data:.*|image: ganeshd2532/prod_data:${DOCKER_IMAGE}|g' "$DEPLOYMENT_FILE"
 
     - echo "Committing and pushing changes"
     - git add "$DEPLOYMENT_FILE"
