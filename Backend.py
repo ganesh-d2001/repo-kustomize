@@ -42,6 +42,26 @@ def connect_to_db():
         dbname=DB_NAME,
         port=DB_PORT
     )
+def create_prod_database():
+    """Create the prod database if it does not exist."""
+    try:
+        # Connect to the default postgres database to create the prod database
+        with connect_to_db() as connection:
+            with connection.cursor() as cursor:
+                # Check if the database exists
+                cursor.execute("SELECT 1 FROM pg_database WHERE datname = 'prod'")
+                result = cursor.fetchone()
+                
+                if result is None:
+                    # Database doesn't exist, create it
+                    cursor.execute("CREATE DATABASE prod")
+                    logging.info("Database 'prod' created successfully.")
+                else:
+                    logging.info("Database 'prod' already exists.")
+    except Exception as e:
+        logging.error(f'Error creating database: {str(e)}')
+
+create_prod_database()
 
 def create_people_table():
     """Create the people table if it does not exist."""
