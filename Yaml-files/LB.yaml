@@ -1,36 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: '2025-01-03T08:49:36Z'
-  finalizers:
-  - service.kubernetes.io/load-balancer-cleanup
-  labels:
-    app: prod-app
-  name: prod-deploy
-  namespace: default
-  resourceVersion: '93550'
-  uid: 593f1ab3-06ca-4b11-a0f0-33103bae2b89
+  name: lb-service-test
 spec:
-  allocateLoadBalancerNodePorts: true
-  clusterIP: 10.0.66.15
-  clusterIPs:
-  - 10.0.66.15
-  externalTrafficPolicy: Cluster
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
-  ports:
-  - nodePort: 30295
-    port: 5000
-    protocol: TCP
-    targetPort: 5000
   selector:
-    app: prod-app
-  sessionAffinity: None
+    app: test-app
+  ports:
+    - port: 5000
+      targetPort: 5000
   type: LoadBalancer
-status:
-  loadBalancer:
-    ingress:
-    - ip: 172.171.68.90
-      ipMode: VIP

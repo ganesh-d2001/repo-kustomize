@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: postgresql-db-disk
+  name: postgresql-db-disk-test
   labels:
     type: local
 spec:

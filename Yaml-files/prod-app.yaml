@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prod-app-deployment
+  name: test-app-deployment
   labels:
-    app: prod-app
+    app: test-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: prod-app
+      app: test-app
   template:
     metadata:
       labels:
-        app: prod-app
+        app: test-app
     spec:
       containers:
-      - name: prod-app
+      - name: test-app
         image: ganeshd2532/prod_data:5273ef0b72458aef74f33e12a6acadc069fffffd
       imagePullSecrets:
         - name: regcred
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 1        # The maximum number of pods that can be created above the desired number of pods
-      maxUnavailable: 0  # The maximum number of pods that can be unavailable during the update
+      maxSurge: 1        
+      maxUnavailable: 0  
 ---
 apiVersion: v1
 kind: Service
@@ -32,7 +32,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: prod-app
+    app: test-app
   ports:
     - port: 80
       targetPort: 80

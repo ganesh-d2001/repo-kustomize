@@ -3,7 +3,7 @@ image: docker:20.10
 workflow:
   rules:
     # Run the pipeline only for normal commits to master, not for CI-generated commits
-    - if: '$CI_COMMIT_BRANCH == "master" && $CI_COMMIT_MESSAGE !~ /CI-generated commit/'
+    - if: '$CI_COMMIT_BRANCH == "test" && $CI_COMMIT_MESSAGE !~ /Test-CI-generated commit/'
       when: always
 
 services:
@@ -38,17 +38,17 @@ Update_Manifest:
     - echo "Cloning the application repository."
     - git clone https://gitlab.com/my-first-grp7622121/Implementation.git
     - cd Implementation/Yaml-files
-    - git checkout master
-    - echo "Updating deployment file with new Docker image tag"
+    - git checkout test
+    - echo "Updating deployment file with new Docker Test image tag"
     - |
       DEPLOYMENT_FILE="prod-app.yaml"
       sed -i "s|image: ganeshd2532/prod_data:.*|image: ganeshd2532/prod_data:${DOCKER_IMAGE}|g" "${DEPLOYMENT_FILE}"
     - echo "Committing and pushing changes"
     - git add "${DEPLOYMENT_FILE}"
-    - git commit -m "CI-generated commit:Updated image to ${DOCKER_IMAGE}"
+    - git commit -m "Test-CI-generated commit:Updated image to ${DOCKER_IMAGE}"
     - git push https://gitlab.com/my-first-grp7622121/Implementation.git
 
   only:
-    - master
+    - test
   except:
-    - $CI_COMMIT_MESSAGE =~ /CI-generated commit/
+    - $CI_COMMIT_MESSAGE =~ /Test-CI-generated commit/
