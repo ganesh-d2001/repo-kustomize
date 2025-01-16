@@ -21,10 +21,9 @@ Docker_push:
     - echo "Building Docker image"
     - docker build -t ganeshd2532/prod_data:$DOCKER_IMAGE .
     - echo "Logging into Docker Hub"
-    - docker logout 
+    - echo ganeshd2532/prod_data:$DOCKER_IMAGE
     - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
-    - docker tag ganeshd2532/prod_data:$DOCKER_IMAGE docker.io/ganeshd2532/prod_data:$DOCKER_IMAGE
-    - docker push docker.io/ganeshd2532/prod_data:$DOCKER_IMAGE
+    - docker push ganeshd2532/prod_data:$DOCKER_IMAGE
 
 Update_Manifest:
   stage: update
