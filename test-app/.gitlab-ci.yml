@@ -34,7 +34,7 @@ Update_Manifest:
     - git config --global url."https://ganeshd1:$CI_ACCESS_TOKEN@gitlab.com".insteadOf "https://gitlab.com"
 
   script:
-    # Clone the repository and update the image tag
+    # Clone the repository and update the image tag..
     - echo "Cloning the application repository."
     - git clone https://gitlab.com/my-first-grp7622121/Implementation.git
     - cd Implementation/Yaml-files
