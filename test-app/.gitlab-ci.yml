@@ -18,10 +18,11 @@ stages:
 Docker_push:
   stage: build
   script:
-    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+
     - echo "Building Docker image"
     - docker build -t ganeshd2532/test-app:$DOCKER_IMAGE .
     - echo "Logging into Docker Hub"
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin docker.io
     - docker images
     - docker push ganeshd2532/test-app:$DOCKER_IMAGE
 
