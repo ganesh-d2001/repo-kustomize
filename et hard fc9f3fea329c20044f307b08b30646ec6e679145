@@ -1,0 +1,1977 @@
+[33mcommit 125f1b39c4174f236acb73ed9326c45ef5c7404e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 114df13 fc9f3fe
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Wed Feb 19 11:56:16 2025 +0530
+
+    Tes-app commit
+
+[33mcommit fc9f3fea329c20044f307b08b30646ec6e679145[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Mon Jan 13 12:03:23 2025 +0000
+
+    CI-generated commit:Updated image to 4f456667b271321065a3bf247d14c17a9d9ffa27
+
+[33mcommit 4f456667b271321065a3bf247d14c17a9d9ffa27[m
+Merge: 38d93b8 829af28
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 17:30:29 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 38d93b8bc7ce42eed59488f8e5aea5fced4bd85a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 17:30:23 2025 +0530
+
+    s
+
+[33mcommit 829af28b19b460306d9664a2e86ee7d6efdafeeb[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Mon Jan 13 10:41:56 2025 +0000
+
+    CI-generated commit:Updated image to 5273ef0b72458aef74f33e12a6acadc069fffffd
+
+[33mcommit 5273ef0b72458aef74f33e12a6acadc069fffffd[m
+Merge: c183fc6 a9c736d
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 16:09:08 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit c183fc6f9b8c37a90547569edb9a347c840d2e82[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 16:09:02 2025 +0530
+
+    test
+
+[33mcommit a9c736dfd8836ada2d2790d3071dbea4724d0e88[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Mon Jan 13 10:31:48 2025 +0000
+
+    CI-generated commit:Updated image to b68e30e5a855d82cc5f3d3c944d7eec793729b8e
+
+[33mcommit b68e30e5a855d82cc5f3d3c944d7eec793729b8e[m
+Merge: 187ce46 d0bd923
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 15:58:55 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 187ce46cdb75eb09eab9915f67642267bc6d8743[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 15:58:49 2025 +0530
+
+    c
+
+[33mcommit d0bd92342dbf321f91fe345294dd12c969a06d65[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 19:24:00 2025 +0000
+
+    CI-generated commit:Updated image to 15a35dfad6a74397056f4a7cd267b744006c1249
+
+[33mcommit 15a35dfad6a74397056f4a7cd267b744006c1249[m
+Merge: 966428e 63ac03a
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:51:11 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 966428eb70f0819733b77b7d0cfcf8fa6dc5a4c2[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:51:04 2025 +0530
+
+    x
+
+[33mcommit 63ac03a540a6bbefc2a336ac8e368a079737c661[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 19:09:06 2025 +0000
+
+    CI-generated commit:Updated image to a0102392edb703fc10f8d4b34c3d79285503cebe
+
+[33mcommit a0102392edb703fc10f8d4b34c3d79285503cebe[m
+Merge: af25338 0a90889
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:36:12 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit af253385b240c81cd16183e4eedd7d211f11651e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:36:06 2025 +0530
+
+    s
+
+[33mcommit 0a908892d236982afd837f2f52f4bf492bb3d3c4[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:57:55 2025 +0000
+
+    CI-generated commit:Updated image to 39cfb8ae95c97fac14c502a83ae1385c8c833c54
+
+[33mcommit 39cfb8ae95c97fac14c502a83ae1385c8c833c54[m
+Merge: f26b38f 399cf10
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:25:02 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit f26b38f33ce27701441d8b820c7b3c4e0f4de23a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:24:56 2025 +0530
+
+    s
+
+[33mcommit 399cf10781e5af8fc4a95e50184165bfd5835aea[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:44:12 2025 +0000
+
+    CI-generated commit:Updated image to b2d261de9fc47a3246fe507d794ed70aa21e50aa
+
+[33mcommit b2d261de9fc47a3246fe507d794ed70aa21e50aa[m
+Merge: bdba1ac aa98e9a
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:11:22 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit bdba1ac9cd33c745a894ddd33770062bc1f75a05[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:11:16 2025 +0530
+
+    s
+
+[33mcommit aa98e9aee90afa8599fcda1e27741e13aa5f995e[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:37:55 2025 +0000
+
+    CI-generated commit:Updated image to fbd8fa34296f5eea43b61bf0b42c8dc5936c8751
+
+[33mcommit fbd8fa34296f5eea43b61bf0b42c8dc5936c8751[m
+Merge: 0c9f5c5 287a792
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:05:08 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 0c9f5c565fd549cd74b5cb57f21c29259636e16f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Jan 13 00:05:02 2025 +0530
+
+    s
+
+[33mcommit 287a792fc6a8b0d80e9a3db249086d60c6e3cdef[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:31:10 2025 +0000
+
+    CI-generated commit:Updated image to c7240cd10b7cdb73063d49d3dedbc624b72860a8
+
+[33mcommit c7240cd10b7cdb73063d49d3dedbc624b72860a8[m
+Merge: 03ddf8f a2abce2
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:58:18 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 03ddf8fbe9902c0e35993a0a053e3ffea4362855[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:58:11 2025 +0530
+
+    c
+
+[33mcommit a2abce2d0e956a292feea2058461e69b2d9b339e[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:24:14 2025 +0000
+
+    Updated image to 47a4e1df49664ccffe52a54231a1c75a7d9a4cdb
+
+[33mcommit 47a4e1df49664ccffe52a54231a1c75a7d9a4cdb[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:21:29 2025 +0000
+
+    Updated image to c712c4ad4168c85ddcfaa6fa0f98f7d9d73cfb7a
+
+[33mcommit c712c4ad4168c85ddcfaa6fa0f98f7d9d73cfb7a[m
+Merge: 2ae2f69 0a4ae0b
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:48:32 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 2ae2f69088ac628fa34c07e3c3bd4896d96e0515[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:48:26 2025 +0530
+
+    main deployment
+
+[33mcommit 0a4ae0b38cb8b358d1a995e02a50743301b6b4f5[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:12:46 2025 +0000
+
+    Updated image to 8ce738c1a97171d58143fbaf1decd1a94654a5d6
+
+[33mcommit 62ffc3fc1154f0db47087e6ce6e679436e6d421c[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:12:37 2025 +0000
+
+    Updated image to 9ca1d979a40988b4b1a89eb4aa9b6b72800b89ca
+
+[33mcommit 34de4da5ed1825c2e048a483ad8ea4fb3797a6ee[m
+Merge: 6463a68 8ce738c
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:41:44 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 6463a68ceafb2cb7e418964f8950fb3f04399ff2[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:41:13 2025 +0530
+
+    s
+
+[33mcommit 8ce738c1a97171d58143fbaf1decd1a94654a5d6[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:09:59 2025 +0000
+
+    Updated image to 77475ade25358ee7066b9beb47d1d41db1db6ec1
+
+[33mcommit 9ca1d979a40988b4b1a89eb4aa9b6b72800b89ca[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:09:44 2025 +0000
+
+    Updated image to cd5254f5d4ee7725df962eef695864f1d2923c51
+
+[33mcommit 77475ade25358ee7066b9beb47d1d41db1db6ec1[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:07:10 2025 +0000
+
+    Updated image to 2e22261a7c706021493f4af74b9e4286c351227b
+
+[33mcommit cd5254f5d4ee7725df962eef695864f1d2923c51[m
+Merge: d92f0c1 2e22261
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:36:52 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 2e22261a7c706021493f4af74b9e4286c351227b[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:06:30 2025 +0000
+
+    Updated image to 4f0ae475ce2aa06bc81a440ceea1a8ed64071131
+
+[33mcommit 4f0ae475ce2aa06bc81a440ceea1a8ed64071131[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:05:50 2025 +0000
+
+    Updated image to 1c253b78ea322165ef08d3adfcb72985cb59f0c7
+
+[33mcommit d92f0c10f65a2e0cbf48c4666403e592e827e1c8[m
+Merge: bf20c05 1c253b7
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:35:47 2025 +0530
+
+    Merge branch 'master' of https://gitlab.com/my-first-grp7622121/Implementation
+
+[33mcommit 1c253b78ea322165ef08d3adfcb72985cb59f0c7[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:05:10 2025 +0000
+
+    Updated image to ff84ebe892d293026760b5f4cb776f5905083400
+
+[33mcommit bf20c05e6535485245a20f4484123711a505f97c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:34:32 2025 +0530
+
+    s
+
+[33mcommit ff84ebe892d293026760b5f4cb776f5905083400[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:04:26 2025 +0000
+
+    Updated image to d051e1826a11acada47cc35c31c06df5728e9ead
+
+[33mcommit d051e1826a11acada47cc35c31c06df5728e9ead[m
+Author: ganeshd1 <ganeshd@devtools.in>
+Date:   Sun Jan 12 18:03:46 2025 +0000
+
+    Updated image to 50fc0b9ad54dd09046e45eaa117994ee481e747a
+
+[33mcommit 50fc0b9ad54dd09046e45eaa117994ee481e747a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:32:54 2025 +0530
+
+    s
+
+[33mcommit 22ec3a3541ec098dd604ed8d2150c18c5073fde4[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:26:53 2025 +0530
+
+    d
+
+[33mcommit 73287f0c4ac1e459184c91ced270c07c7c745158[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:06:31 2025 +0530
+
+    a
+
+[33mcommit eab26ffb58422c1a36c6e192ccf0d9e7dd0e97d3[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 23:00:43 2025 +0530
+
+    s
+
+[33mcommit 6bfc0c2c71be14ce48f2b133b5a137bdb90fda84[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:52:32 2025 +0530
+
+    s
+
+[33mcommit 1a39a6b9b8466e880bcabff3acd05e177392ea28[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:51:07 2025 +0530
+
+    d
+
+[33mcommit 6310bb8646af5fcc007fe4c8c0fc670f2fae760f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:44:37 2025 +0530
+
+    xa
+
+[33mcommit 74e86d6307b806eb64d420314d5eb60cb7dee60f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:41:23 2025 +0530
+
+    d
+
+[33mcommit 42d51a7fe0317d0e59779b37a4b3bd82d7b0588d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:39:14 2025 +0530
+
+    d
+
+[33mcommit 3042c6f2638f0e0cb8a49aa772c8d8e24a910d2f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:36:45 2025 +0530
+
+    d
+
+[33mcommit 374eb4dafa558c1b38ede19c5227a943e81e6c04[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:31:34 2025 +0530
+
+    part5
+
+[33mcommit 8e96192fea2c7ded7fa09e39bb77c0d7d7f9ae5a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:22:07 2025 +0530
+
+    part4
+
+[33mcommit 58bab5d9397bd1991f056a0858a98ed4f3af9268[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:20:19 2025 +0530
+
+    part3
+
+[33mcommit 002a9f432e831f907b2beceeb8758284189976bc[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:18:06 2025 +0530
+
+    CI changes part2
+
+[33mcommit f0bd47bb72265e98d8a7ad6e579928cdb64f789c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Jan 12 22:16:44 2025 +0530
+
+    ci update
+
+[33mcommit 2ece1a65825ace4c77e54555ee3a31e9e79f1757[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Jan 10 18:32:25 2025 +0530
+
+    sas
+
+[33mcommit eeec7d9bb45a99ac4b6f5294ffa3e03c6fa6f618[m
+Author: Ganesh Diwakar <ganeshd@devtools.in>
+Date:   Fri Jan 10 13:00:32 2025 +0000
+
+    Delete PostgreSQLStatefulSet.yml
+
+[33mcommit 5745f680e46b7fb1186010ae31e5cfefc7fe0c30[m
+Author: Ganesh Diwakar <ganeshd@devtools.in>
+Date:   Fri Jan 10 12:56:57 2025 +0000
+
+    Delete pvcpostgres.yaml
+
+[33mcommit c05b215e1950be20c416a5289ba5fb3dd01e487e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Jan 10 17:52:21 2025 +0530
+
+    s
+
+[33mcommit 728b29700ed9e2b9089b3141767592aa2b74643a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Wed Jan 8 19:31:00 2025 +0530
+
+    x
+
+[33mcommit 2e3c32bd645fb6b3209d112d7c952072616000df[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Wed Jan 8 19:24:47 2025 +0530
+
+    Test
+
+[33mcommit d5fd27d467a515ef2a1941053c01053ce0062fe2[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Wed Jan 8 17:40:41 2025 +0530
+
+    scs
+
+[33mcommit 4294e75b041f6c9dcef486c3e8fce53ad30354c7[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Wed Jan 8 12:16:50 2025 +0530
+
+    c
+
+[33mcommit 5f7ddd1029fa5ff321047a02dbc15f8474530a10[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Wed Jan 8 12:14:31 2025 +0530
+
+    Yaml files
+
+[33mcommit a232080bda4a375fd8b40c972e1179df28a614c6[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Jan 7 17:04:56 2025 +0530
+
+    ccs
+
+[33mcommit 6ee7e30c2c35c1734939a465ae5d591be2b45884[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Jan 7 16:53:35 2025 +0530
+
+    scc
+
+[33mcommit 243e26848bf4306f4b4514fd5bc1bd6662016424[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Jan 7 15:37:15 2025 +0530
+
+    pl work
+
+[33mcommit 68070a8ed450d475fe84284f7098be1a660a4c3c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Jan 7 14:10:37 2025 +0530
+
+    vdv
+
+[33mcommit dbb94f993f53e657050f677a6f7004bfc454066f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Jan 3 15:21:25 2025 +0530
+
+    cs
+
+[33mcommit 0e3936e7bf55c6af65981540817e01653d9c88b4[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Jan 3 15:18:34 2025 +0530
+
+    sc
+
+[33mcommit 83f3036ff7ed3657e1f7ea7ea5b3bebfede905d0[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Jan 3 14:50:07 2025 +0530
+
+    cac
+
+[33mcommit ce27f04adadb4919bcfe98ee569dd47111e4659b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Jan 2 16:59:07 2025 +0530
+
+    jt
+
+[33mcommit b41518d6aca484864ef8a20da027882023abc1ac[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 15:20:22 2024 +0530
+
+    vdd
+
+[33mcommit a899bd93eac249d2fb74b401f12d4d9f278a4ecd[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 15:17:35 2024 +0530
+
+    bfb
+
+[33mcommit d8fc8b6fc0587aba907c37de3e2495acd2eb3349[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 15:10:18 2024 +0530
+
+    cszc
+
+[33mcommit f24747de14b19b8762f1c56b4f50765cb6cbf590[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 13:48:37 2024 +0530
+
+     xv
+
+[33mcommit 2e99fab8effd3b99f189b752acf393910584edab[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 13:41:35 2024 +0530
+
+    cca
+
+[33mcommit e697f11317a202a5f2cfbd42fad7a8f83426a8a0[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 13:40:01 2024 +0530
+
+    c
+
+[33mcommit 50a2e481feec494d2a0dcf0896ca3b38a8fb1d0d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 13:37:56 2024 +0530
+
+    h
+
+[33mcommit 7dbf88d1415f5c9b581c6a6012bf3802bb6bfd3b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 13:27:17 2024 +0530
+
+    a
+
+[33mcommit 114df1399d3de5dc5f998af4ba77a744110a9f9d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 13:26:04 2024 +0530
+
+    v
+
+[33mcommit b227d2e6834de889b5bc856580dc745c89eea6f3[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 13:24:42 2024 +0530
+
+    dcs
+
+[33mcommit 981c5183b905ced692fe8c18af944f8c4d476a4c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 13:13:54 2024 +0530
+
+    cs
+
+[33mcommit b02017c6379a6c2d4a2e8e75d77717f6784507e0[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:58:11 2024 +0530
+
+    sv
+
+[33mcommit 4742b7a2ec6ccc7422892d9dcee767d9377360a4[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:50:55 2024 +0530
+
+    csc
+
+[33mcommit fb9cc0f64ec6323141f9f6a9930a60b8eceffdfd[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:48:16 2024 +0530
+
+    sc
+
+[33mcommit c71a929ba3f9e54f41e3df215927b0028acecf2b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:43:54 2024 +0530
+
+    d
+
+[33mcommit 00427e0d21691dd0f40a58bb5d4db674cf56cb29[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:29:21 2024 +0530
+
+    sf
+
+[33mcommit 086529ee1a2dc1749fe0ad857c8331e19813c738[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:26:47 2024 +0530
+
+    csc
+
+[33mcommit 112a0d08c4b85a1782d6d50a269b3cda50035cd3[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:09:02 2024 +0530
+
+    ax
+
+[33mcommit 5f1c141210c1aa992b28327b394155a01b6bd81b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:03:34 2024 +0530
+
+    csc
+
+[33mcommit 2e54e35fe51ddcd12d6eda4e69aed03aa6fb2155[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 12:02:20 2024 +0530
+
+    dsd
+
+[33mcommit a7d83c8dbc228c418aaaa07fff41f045dda6a191[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 11:55:13 2024 +0530
+
+    sdvs
+
+[33mcommit fb5648158e3096759f5412cc42e1e1686d216385[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 11:44:25 2024 +0530
+
+    xc
+
+[33mcommit 7634b7ebec2cb5d4a51d7b0100663af5529858db[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 11:25:41 2024 +0530
+
+    sxx
+
+[33mcommit 36521f4d03801ea931ba1b172c7c9ce421272757[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 11:22:02 2024 +0530
+
+    csc
+
+[33mcommit 71452104d9cd50161a663cd7d78a3eaf5abb679a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 11:15:07 2024 +0530
+
+    f
+
+[33mcommit 72b88af3ef9a50db7d0d1c4c8dda0d90fa4b114c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 10:35:00 2024 +0530
+
+    s
+
+[33mcommit efca87a07a73b1c108abbfce5bfeecf5052618ce[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 10:26:17 2024 +0530
+
+    x
+
+[33mcommit adb1948a46dfea33abe0b5d5f6a4ad1141fafc16[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 10:22:59 2024 +0530
+
+    c
+
+[33mcommit 9ba69e258109c61db2186603c7d0a911bc537ccf[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 10:21:24 2024 +0530
+
+     dcd
+
+[33mcommit cc59cbf54690140c4e828a3ee518abc07dcc4f60[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 31 10:19:11 2024 +0530
+
+    cb
+
+[33mcommit d4096dc5d2fa053c92e73539ef78cebf4f38c6f5[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 16:09:55 2024 +0530
+
+    vsdv
+
+[33mcommit da1b943240e318c14625769e2252667118d4c91d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 16:05:53 2024 +0530
+
+    xcszca
+
+[33mcommit 663beb451fdf494071bbc16a7fb7b1c9beb6c24e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 15:37:36 2024 +0530
+
+    ssd
+
+[33mcommit 8c91966538ebb842bd31a9d14a53395ed25586e0[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 15:35:12 2024 +0530
+
+    ss
+
+[33mcommit 5501935a617fffdc9fb8b1cb5c58cd54ae401669[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 13:28:24 2024 +0530
+
+    sds
+
+[33mcommit 0c4027c0883826418dec6dc9727c96c862c47f29[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 13:14:43 2024 +0530
+
+    c
+
+[33mcommit 8aeb85d8ec06fba21a411dac3bae18581e1d995f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 13:13:21 2024 +0530
+
+    cs
+
+[33mcommit a7723fe5308887c98aaa2cda1440ddda801e2be3[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 13:06:56 2024 +0530
+
+    cc
+
+[33mcommit 17604a6f22442377b1d7a678b091f93f465d068a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:59:19 2024 +0530
+
+    cs
+
+[33mcommit f52eb0ae5c0f87d2aa28037bf2dc987abdc04dc7[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:50:37 2024 +0530
+
+    cssc
+
+[33mcommit 2a5117a35bf54c71a081a058b492ee21d67f9f15[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:47:17 2024 +0530
+
+    s
+
+[33mcommit 0b2d072fc03a3dbedddef4ef1e1b85a844f8194f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:43:54 2024 +0530
+
+    ddf
+
+[33mcommit d1ed23ca9f808d62d19dc601142e5ea4c1123990[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:40:06 2024 +0530
+
+    w
+
+[33mcommit b18f2114891377d20f1736223bc287210ddb15f8[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:35:47 2024 +0530
+
+    caf
+
+[33mcommit 212060600544be73b7e9a49468aba8b6fd2ef756[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:21:54 2024 +0530
+
+    d
+
+[33mcommit 2868d086bf3528a2695fd5601e1abec8eec41e33[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:15:48 2024 +0530
+
+    a
+
+[33mcommit 87ac67b312f7f4aee920fef4cfcad46ebffb7b5a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 12:05:35 2024 +0530
+
+    s
+
+[33mcommit 40b2d5d84e901ab25bdcfdc62a799ebab0d9bf2d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 11:29:05 2024 +0530
+
+    testing -T
+
+[33mcommit 52ef8f10177868265335bf1cc20ab23f8503a95b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 11:26:38 2024 +0530
+
+    testing -T
+
+[33mcommit fa0f7dcb65b89dd83b31677351d5adbebcfbbdc9[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 11:22:19 2024 +0530
+
+    zz
+
+[33mcommit 01655b8f7bfe910d6d3a371d0eb6e872982e67ac[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 11:18:56 2024 +0530
+
+    ss
+
+[33mcommit 68fe20e9ac23952f34d570576decb42024229def[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 11:10:43 2024 +0530
+
+    c
+
+[33mcommit 04fc2ba35776206c0dc31604bea74952df4c6420[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 11:09:07 2024 +0530
+
+    c
+
+[33mcommit 2be6067adfc0534f0d7e6b0637846df4e4d2385c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 10:29:32 2024 +0530
+
+    j
+
+[33mcommit edf998cfb2c0e180b624429efa76e9c9d0ea5e8f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 10:19:20 2024 +0530
+
+    c
+
+[33mcommit 27e8cbf013fefa6c25fe63a91ad83cc645d508c5[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 10:09:35 2024 +0530
+
+    i
+
+[33mcommit 71fc0e14582295d57dbb7d42edeeb390eddda40d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 10:08:10 2024 +0530
+
+    d
+
+[33mcommit 08e2ee07c21eb9e65f6522fe0868e5202384e924[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 27 10:06:51 2024 +0530
+
+    b
+
+[33mcommit 7dcb4054ebbc74aef042ab2b59584008b2dc840f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 19:05:34 2024 +0530
+
+    c
+
+[33mcommit 4afeed7665a9b6747586de5c03ef36bce0b7456e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 19:03:15 2024 +0530
+
+    xd
+
+[33mcommit bc96c3835c80cb642ef15b6d151e8594b32634f6[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 18:59:26 2024 +0530
+
+    vc
+
+[33mcommit bb856de8ffda5bc61cbbccfb537f8c39802f8408[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 18:58:11 2024 +0530
+
+    c
+
+[33mcommit 5175916ae5db53f733eb88ee8ed34ff8f396f24b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 18:53:06 2024 +0530
+
+    c
+
+[33mcommit 4cce0b44cf00d636ec89c4eda2d2cf18a86af551[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 18:49:23 2024 +0530
+
+    c
+
+[33mcommit 0069b984ef59d4697459a56f8722abe61db9c7d3[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 18:47:05 2024 +0530
+
+    ss
+
+[33mcommit b37ee7dfecf91740112f70fb71d35c98c14e736d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 18:45:36 2024 +0530
+
+    b
+
+[33mcommit 049b173c87c72395a1720ecf3bd74889532ae0c4[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 18:44:22 2024 +0530
+
+    d
+
+[33mcommit f13caada1ab590f81fad8ac52e79748ad98f6d2d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 18:43:03 2024 +0530
+
+    d
+
+[33mcommit 2a9eab117cb9d1c7358031621beeac172865c19f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 17:29:12 2024 +0530
+
+    x
+
+[33mcommit 22626b4597de6f25419bad3fe6c6077685baf3aa[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 17:27:57 2024 +0530
+
+    actions
+
+[33mcommit a9b6c821a58e0eba1c4ba109c827cef867cefcbd[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Dec 26 17:09:54 2024 +0530
+
+    test
+
+[33mcommit 99dddcdfa8cb50d17cbce4f6bddc8b66528676f5[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Tue Dec 24 17:11:44 2024 +0530
+
+    s
+
+[33mcommit 4316dee1e0a30ddc12963d7fef068de2db68d2d3[m
+Author: Ganesh Diwakar <ganeshd@devtools.in>
+Date:   Tue Dec 17 13:37:36 2024 +0000
+
+    Update .gitlab-ci.yml file
+
+[33mcommit 050b5c94f39f49d376da75ef39e380d6d9f46815[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Dec 13 18:18:07 2024 +0530
+
+    s
+
+[33mcommit 29749083f87df38da47d407bdd457258073b1524[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 17:56:21 2024 +0530
+
+    w
+
+[33mcommit 1f53471eed6e631a35074982989d357c8d7baae4[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 17:52:55 2024 +0530
+
+    s
+
+[33mcommit dd7c2e6f5b285ca12eb9687fd438a1af45c637f9[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 17:50:10 2024 +0530
+
+    d
+
+[33mcommit 39ba01a22cf38a05073753908e1c620cd38fc87b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 17:47:10 2024 +0530
+
+    d
+
+[33mcommit 1e5802f8e710894ca5f852fdb3a7729aac8672d6[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 17:36:24 2024 +0530
+
+    d
+
+[33mcommit 012a13bb420a09e7e50d5dbca15edce45076081e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 17:31:03 2024 +0530
+
+    f
+
+[33mcommit e5eadffab4d240bb7cb32c4f4b3fb97a1467e893[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 17:27:02 2024 +0530
+
+    v
+
+[33mcommit 0f90297ec80740221eb57168ee9f84221c55a41c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 17:02:10 2024 +0530
+
+    d
+
+[33mcommit a1cff3a3c74a082b2f34b74e9494f858b97fb46e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 16:29:42 2024 +0530
+
+    s
+
+[33mcommit c85e164456871d04bf562e65d2547fd3265864f2[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 16:19:48 2024 +0530
+
+    f
+
+[33mcommit e552caefe8bb3dd4f021a6346470c044fac3ae91[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 16:12:42 2024 +0530
+
+    d
+
+[33mcommit f5d37a57e57883b0753fffda04211a7a7e4e1cd8[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 16:05:04 2024 +0530
+
+    h
+
+[33mcommit f3cfdaec6d6162fab5a851258d1e606d4d2a8de3[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 16:01:44 2024 +0530
+
+    s
+
+[33mcommit 8cdb515b6cc19b78bea545aa397b2c3cfe9e6144[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 15:41:59 2024 +0530
+
+    s
+
+[33mcommit d6a2b3b528ab66322cfde20708978794f0eada16[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 15:35:21 2024 +0530
+
+    x
+
+[33mcommit 295898ada3b6583b0ea60b8acc4a00dc5058cd55[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 14:36:33 2024 +0530
+
+    x
+
+[33mcommit 1a0a11d5ea5f4d2d11c3d7b4ceb271df4aa5a535[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 14:27:46 2024 +0530
+
+    d
+
+[33mcommit 7d8bd252ea5e344ebaa3ae3665d53a5aa05ef5bc[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 14:24:41 2024 +0530
+
+    s
+
+[33mcommit 9d2eeccde4b1e6825a5d8a33dd73f07f99a418b4[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 14:24:29 2024 +0530
+
+    s
+
+[33mcommit 430462d42bf72b4ba1ac04ffc1039dc74968e2e4[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 13:31:07 2024 +0530
+
+    d
+
+[33mcommit 90bab155e61a526eac28a39a546a91467126a01b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 13:22:36 2024 +0530
+
+    x
+
+[33mcommit 8db3ffabb46ea615102be9e49c5e4aab1b638163[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 13:17:22 2024 +0530
+
+    s
+
+[33mcommit 3183afc934efe022b47071da182ae63912348e04[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 13:13:37 2024 +0530
+
+    s
+
+[33mcommit 70951c3038343e1467a03fd49fa263d1ad20d889[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:57:03 2024 +0530
+
+    s
+
+[33mcommit 14b5e49df5580f121018e6953644771e7f77bcb3[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:54:20 2024 +0530
+
+    s
+
+[33mcommit 3050ec90242a9f0f5b48ad24819d26b3ad0bb535[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:48:31 2024 +0530
+
+    d
+
+[33mcommit 7a3de6731e29a31d933ccf1303877a37a2684e57[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:45:16 2024 +0530
+
+    x
+
+[33mcommit 896d71602f25741f5c91c0c8e2a2e237ba273127[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:37:59 2024 +0530
+
+    s
+
+[33mcommit e6ff46a0dc0f9364cea39129850b8d1c09d55e81[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:34:58 2024 +0530
+
+    s
+
+[33mcommit cd7fe164e48ceb76fbc79b8e0013c15dbaab61fc[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:27:21 2024 +0530
+
+    d
+
+[33mcommit b8496192280ae7ee3da87e787a0173705cbdc33e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:21:29 2024 +0530
+
+    c
+
+[33mcommit 097dda92e575170f6d4f73a7f17a7b28693e650c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:15:48 2024 +0530
+
+    s
+
+[33mcommit ff6e0206ce30360b332fe8746ebb5f62ad038371[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:12:09 2024 +0530
+
+    d
+
+[33mcommit 6dc3c0f614f3aa3c7b78de54c488ac8ae0fb231c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:07:43 2024 +0530
+
+    d
+
+[33mcommit 821303357dc940b50016a3cceea4299f148df976[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 12:00:35 2024 +0530
+
+    s
+
+[33mcommit 6baee473f93e844e4b80d0d58a4ec35fd1a749f2[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 11:57:23 2024 +0530
+
+    s
+
+[33mcommit f08a0009e731d1f0d48a4db31aadb903fab0bc2d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 10:23:59 2024 +0530
+
+    c
+
+[33mcommit 031bcb8779ab7e65f45fb29d1e9a6cc82f9f2ca1[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 10:22:37 2024 +0530
+
+    d
+
+[33mcommit f7f80ea05d2593e18ef731de5ea145ee6c5cfcdc[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 10:18:25 2024 +0530
+
+    f
+
+[33mcommit fe7a5d8279bd3243e1c593306ebdf0304eb0f06c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 31 10:12:21 2024 +0530
+
+    s
+
+[33mcommit a828fab40b6265daa04bcb169265a1b3a757ce39[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 19:33:06 2024 +0530
+
+    a
+
+[33mcommit 0dc12477012bd6c8b97820dca7dc8bf3a188838e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 19:25:56 2024 +0530
+
+    s
+
+[33mcommit 77a4c98d5c57dd54c1c9dc805859aa6cde613e40[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 13:44:44 2024 +0530
+
+    s
+
+[33mcommit e884a548721ad02f79d61bd80f27a466d4b751f8[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 13:40:47 2024 +0530
+
+    d
+
+[33mcommit 0235581a4ee91864fafe65e0dfcb20c25f32da77[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 13:37:36 2024 +0530
+
+    x
+
+[33mcommit efc6df941ce6d882a77088299d0cf5de20a04abd[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 13:37:17 2024 +0530
+
+    s
+
+[33mcommit ecda8a6ac92c5d0fb610bb3b53b29884e8e323ee[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 13:36:03 2024 +0530
+
+    a
+
+[33mcommit 241f3d50ee23bbe0953ecb937fafe61adaf6f14c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 13:34:19 2024 +0530
+
+    xa
+
+[33mcommit 4be2ed463d43b24de3dee70d7913965431c63210[m
+Merge: 722173b a0bfa50
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 13:26:42 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit 722173bf3f5d775155c10ba3e68d5272100dcc81[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Oct 21 13:26:36 2024 +0530
+
+    a
+
+[33mcommit a0bfa50d879b20bb02c76b80b91d4556b4eff991[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Sat Oct 19 12:44:43 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit fc9faecb47e4914696be254e71733f0423015cf9[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Sat Oct 19 12:43:21 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 91f7ff354165154e442ea13c9c4a57e460a57ede[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 19 12:41:10 2024 +0530
+
+    q
+
+[33mcommit ecb1469986af572d3ecfe96ed7bcda5d5310fce6[m
+Merge: 878f234 e98efa8
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 19 12:18:51 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit 878f234a1ca44183944c6e6c637d970c60d8b8bc[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 19 12:18:33 2024 +0530
+
+    a
+
+[33mcommit e98efa8b7dd3f08c248f154e0d4ce0915f64f52c[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Sat Oct 19 12:16:14 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 913a9f1c5ff6c7307e2ff83f1ab29234ebbf8513[m
+Merge: f49c827 e8829ba
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 19 12:07:47 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit f49c827f23a0dee734c6076d67cac13fa985301b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 19 12:07:43 2024 +0530
+
+    a
+
+[33mcommit e8829ba1e67eddbe03841f5a102f1bd28fd78954[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Sat Oct 19 11:50:32 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 6a2a98cb65f72de72d9001da37c40ec1d31a7879[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Sat Oct 19 10:43:42 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 2f05d3ab9b6ef7bab4d5bd1f2d4b60b2054b3a7a[m
+Merge: f1c4e0b 6772e38
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 19 10:40:17 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit f1c4e0bf6b9faecd34320bb195577c26020d68ca[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 19 10:40:02 2024 +0530
+
+    s
+
+[33mcommit 6772e38d9561fca8acb657fb302dc636d3e7cefe[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Sat Oct 19 10:39:36 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 07434636f548186334c33bd6f679d62e70bf04f8[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 18 16:55:06 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit f4c3f91a3a4831544156a8f05fa5aadf0f45a1a5[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 18 16:22:57 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit a8a11e07ab12cc8b479d7bc496b39567ce7b910f[m
+Merge: e9ef2ec 119bca0
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 20:22:31 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit e9ef2ec5396e8d7e0376ba99d0f0a019dd968aab[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 20:22:24 2024 +0530
+
+    s
+
+[33mcommit 119bca0bf893d93e8655ecba4d5068f09848fb5d[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 20:07:20 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 4a83760dc1d45063905983b778da299418676a15[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 19:46:28 2024 +0530
+
+    s
+
+[33mcommit fe93accadbccf269939f412a66f9ad7ca6d9524e[m
+Merge: c9ec972 d5ca2d6
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 18:49:55 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit c9ec972a828a17d3f50b9825ec2f4988ce7d2813[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 18:49:45 2024 +0530
+
+    test
+
+[33mcommit d5ca2d6ac87e28a245c6951d70296b96e5028c53[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 18:38:46 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit ca4af9b9cca7cd02499ec4af0889c4d8c969766f[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 18:26:20 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 210b1556754e4ad715df4a637d86747edc7ee3bb[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 18:22:39 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit b4163c415dcb7b967ec48e525c37b8f1d7a7cfc0[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 18:21:02 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 91ed900af08b66b2a4f6aed9e106ae3536a07a06[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 18:11:50 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 0f27c5cf84f73578d2eda4460686c565c0f22114[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 18:07:24 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 866ab6a312ce209d45668c0f0e875c26106c289f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 17:52:00 2024 +0530
+
+    s
+
+[33mcommit 73b20c0c72790b037fd5a6830344f775d2e4d80c[m
+Merge: 6e771d8 f3ef53e
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 17:48:39 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit 6e771d83efac766fb7446dc382bf63c2ba7f3926[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 17:47:47 2024 +0530
+
+    templates
+
+[33mcommit f3ef53e07798313961d34eae3d8c4c583ae7009d[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 17:41:46 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit a93852e0fb593e000d25fcbb7f7e4b2e7320e084[m
+Merge: f6b8167 2065827
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 14:39:22 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit f6b8167b12e1d61eb3981a0e91e49f565689280b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Oct 17 14:39:17 2024 +0530
+
+    d
+
+[33mcommit 206582780e1ca00a05f3a10c333616766cd09b4e[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 14:19:20 2024 +0530
+
+    Update docker-image.yml
+    
+    updated the name of the docker username
+
+[33mcommit 09135270506977127186ee645e34a174ef4271b0[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 13:30:19 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit a33d80c562502c7f0c7e0d3dcfb3dca4e5a3b05b[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Oct 17 13:19:07 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit acc452c63305adade4f2beae04dd3e53846265cb[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Mon Oct 14 19:11:31 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit fdba544c6e9b5fa26c397badb2444cf98f179645[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Mon Oct 14 19:10:04 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 54362b25b68fd9772ac378227fcd14a23e61b0dc[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Mon Oct 14 19:08:03 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 370e91cd77a0221be43b09d2f018c92ac12d1824[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Oct 13 00:14:02 2024 +0530
+
+    s
+
+[33mcommit c17295031fbc82fde3bd2657a29a5f1cc9d4fce6[m
+Merge: 324c338 6c4f8f5
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Oct 13 00:05:52 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit 324c33853be95e0803d1fa4d840c14642d0ee4a4[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sun Oct 13 00:05:22 2024 +0530
+
+    s
+
+[33mcommit 6c4f8f530f76a8857c4581728e266ff0d45b1cbd[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Sun Oct 13 00:00:35 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 01d41764901d92bccad2165824deef16161cff13[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 23:52:48 2024 +0530
+
+    a
+
+[33mcommit 4b05a1597df2a10e638ff738ff2ff9fc63355d32[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 23:43:10 2024 +0530
+
+    s
+
+[33mcommit a3e33cfb0e14636f971e5a4d26b6eefb35c26110[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 23:34:54 2024 +0530
+
+    s
+
+[33mcommit e39c71b75c0ea8f8599306e5bc489f07535e3755[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 23:16:21 2024 +0530
+
+    q
+
+[33mcommit 5aa9c7ae25e6c92ba79fe70fa32cea90356e6995[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 23:00:51 2024 +0530
+
+    s
+
+[33mcommit 1967e470bf7a7ce1b234c03bf03bc41369963dc6[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 22:53:01 2024 +0530
+
+    s
+
+[33mcommit 3a20b1d6141b546616ad4b0f9d6aa54fa12b18ce[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 22:46:39 2024 +0530
+
+    h
+
+[33mcommit f4b5a50b2cb943169034f668818f676b566c6e3d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 22:39:04 2024 +0530
+
+    h
+
+[33mcommit 3251d701ee81183ddefb8305c5e554a49e6f2f72[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 22:19:28 2024 +0530
+
+    s
+
+[33mcommit 384101c321fbbaa83c5f99ec467ba2c6c0234631[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 22:16:58 2024 +0530
+
+    s
+
+[33mcommit bd3850aa592264c646a05605f2e824b688aa9f40[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 22:09:09 2024 +0530
+
+    a
+
+[33mcommit 724609fe06b41f31b031e0825ebcd3602f086d6d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 22:02:48 2024 +0530
+
+    a
+
+[33mcommit 1479165a14f16e88dc70b64b00335583fd5a8602[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 21:32:14 2024 +0530
+
+    s
+
+[33mcommit 3d2fbe77f3d2d7398196360608a9019ed7f82c13[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 21:07:57 2024 +0530
+
+    s
+
+[33mcommit caed8159846b9d1e43d5c96dd1a9c32d82a1353c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 20:53:14 2024 +0530
+
+    a
+
+[33mcommit 7ba20f1100b56664d96d04b85b63c124e1cfcdef[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 20:19:35 2024 +0530
+
+    s
+
+[33mcommit 1ac3cc55cda215e6bf63c4875c077fdfeea7831f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Sat Oct 12 20:07:54 2024 +0530
+
+    ws
+
+[33mcommit 9fcde793fa8a32c7f7905fefbbd508ca4c12fd48[m
+Merge: 98fd434 6a229a0
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Oct 11 18:12:13 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit 98fd434b10c48cff5773cd29801fa159639c98fc[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Oct 11 18:12:08 2024 +0530
+
+    q
+
+[33mcommit 6a229a0856b7dae86bb756a0d0201344bb7cf0fe[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 18:07:57 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit d3f314f95fc5511e73d01d73fc325326fb2fc942[m
+Merge: 1a47b3b aa77626
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Oct 11 17:45:51 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit 1a47b3b634ec5f8016e034cb5f5e30eea34abfdc[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Oct 11 17:45:42 2024 +0530
+
+    x
+
+[33mcommit aa77626936c484811449891573ed3afc767ecd97[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 17:19:16 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit f9aec5689cef7868812c3317c4be70eeed99c262[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 17:14:22 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 8c05fff77c7c809ff3b816bd298b99f53d3c3f3c[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 17:06:34 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit dda4a1c6799d2a69de8a37b8eaa5ced7a92a3d3b[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 16:57:06 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 93ea3c453ce4004316336f9e999f79a6679b7216[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 16:42:39 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit f84439f6ce6637f1091ee73539359d8b7e3ef6c0[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 16:30:49 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit f063be457abe1aa81e736506820db0a276ed8960[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 16:21:57 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit b2e7cb8707d62d737e808775c516b27ec2695be1[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 16:19:33 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 23f796d8b0fed5b90f0663ca07ce27b23cb70c73[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 16:11:12 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 50b5401f58be5185da52b194603ef23cfcc789a6[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 13:28:47 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 7398dce92523f72864d22c5e2dc9ae558d5e9be8[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 13:27:43 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit ea0ab06e7d393b570cab3332352e25a48ab66399[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 13:20:15 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 81174b551d3cdd4f3d8cd10ad3fa9f4e468017a0[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 13:14:44 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit abc269c4c6603c585f739b5702ecbf0e570e5ee8[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 12:52:54 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 838726a522bb49c6f611e13e288ca41e58c1d3c6[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 12:45:42 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 48547b1bab258bb7e8c0d4c131bc8f5b7488af54[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 12:43:51 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit 23ef3ebfb41683c239f2ca99e95c6c48c295e477[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Oct 11 12:38:26 2024 +0530
+
+    q
+
+[33mcommit 310576889f75a06e7aff8553c11927fec953d959[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 11:28:44 2024 +0530
+
+    Update docker-image.yml
+
+[33mcommit c8b667f7ba090bbc2f2dd2138491e4be2b31b30f[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Fri Oct 11 11:28:03 2024 +0530
+
+    Create docker-image.yml
+
+[33mcommit bc764c68e089d892beeba017740e7a16994eae2e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Sep 30 18:08:57 2024 +0530
+
+    s
+
+[33mcommit e7c914feeee8387925aca0b837987932e213ce9d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Sep 30 17:30:30 2024 +0530
+
+    s
+
+[33mcommit 46d2d50a4b6acaf192ca75f82edcdbfd7d82d728[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Mon Sep 30 17:18:23 2024 +0530
+
+    c
+
+[33mcommit 51a7bd7c2b4b65c6eafa5156f9ebc84f71ed7d41[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Sep 27 13:26:57 2024 +0530
+
+    k
+
+[33mcommit e97b0e9645e0341d0a4975461ffbdeaef71bef33[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Sep 27 13:05:13 2024 +0530
+
+    d
+
+[33mcommit 142d07b4c8b0fdcc36e2a606bb92e9ede76762fc[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Sep 27 12:46:00 2024 +0530
+
+    s
+
+[33mcommit 39746d3da95541922045816caa6a6974da56295f[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Sep 27 12:12:03 2024 +0530
+
+    s
+
+[33mcommit bd93efab79f833433162c5469046ef4f45d43043[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Sep 27 11:56:30 2024 +0530
+
+    s
+
+[33mcommit 0963591477334428d1a37137e89cbce2060d342a[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Fri Sep 27 10:45:13 2024 +0530
+
+    d
+
+[33mcommit c37dcba78967f82a04534550f1a6007f740386f6[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 18:50:14 2024 +0530
+
+    s
+
+[33mcommit 9dee90b2e5df0543a15d9f06cc2de6beb08fc1fe[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 18:42:29 2024 +0530
+
+    d
+
+[33mcommit 4807e3b819d5b33bf049a6d36cfe8cc8f55626b1[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 18:29:45 2024 +0530
+
+    r
+
+[33mcommit cea198321522837c750b11774b69924661e6e4b5[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 18:18:15 2024 +0530
+
+    d
+
+[33mcommit 1eae1f5289305a049e76fbd28c3ac6a75d2f9521[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:38:00 2024 +0530
+
+    d
+
+[33mcommit 46d01b73bc55eb5553bdd1dc29f77adb33850f26[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:34:19 2024 +0530
+
+    v
+
+[33mcommit fc14ace7cc005bb5af83a598864e01c0975e4d8c[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:25:42 2024 +0530
+
+    re
+
+[33mcommit 46a7615698116becea577f9bcca25801e41547eb[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:21:12 2024 +0530
+
+    test
+
+[33mcommit 08b1596d4aa29dbf84d70e373532a288498f18d9[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:19:48 2024 +0530
+
+    test3
+
+[33mcommit a84be1c4812927e8c944fcb5759948f720ad7ac9[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:15:55 2024 +0530
+
+    Test5
+
+[33mcommit 92eafa1f4bd42ff521951e995af22d24790e8abd[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:14:01 2024 +0530
+
+    Test5
+
+[33mcommit 7a7410a8d67065efd4c0eefac0363dcff58ba4f3[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:10:55 2024 +0530
+
+    Test4
+
+[33mcommit 10e5009d3f8b1271067ec3786a360eacb1e6eba1[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 17:06:18 2024 +0530
+
+    Test5
+
+[33mcommit 08b682149884fc4648965d9a44812d912f6660f2[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Sep 26 16:57:01 2024 +0530
+
+    Update Dockerfile
+
+[33mcommit 09d8cacbf5014b8f2ea5f819d6c73b42d08369ab[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 16:55:31 2024 +0530
+
+    Test4
+
+[33mcommit adbf8776e900c53ba77401de28367a5841b4dd15[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 16:47:59 2024 +0530
+
+    test6
+
+[33mcommit f04e0208b7a5495af89f33bf3893a577be3f2201[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 16:25:03 2024 +0530
+
+    Test4
+
+[33mcommit 85d87694fb2a6a316e20c135f6efc03564a59629[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 15:55:08 2024 +0530
+
+    test4
+
+[33mcommit 850d1f2e11f6e343a36a4e69a3213eac57b8d795[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 15:41:47 2024 +0530
+
+    test4
+
+[33mcommit aeaa6703a9caf413d8e5176ea838515f77b1dbbf[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 15:32:13 2024 +0530
+
+    test2
+
+[33mcommit 9cdb3026cf3e2ad190ad24990e5cac447e6c9bdf[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 14:59:02 2024 +0530
+
+    Test
+
+[33mcommit 12abe8ef39ff1223c7855ec4aac0d92ea8624802[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 14:06:04 2024 +0530
+
+    test2
+
+[33mcommit 163dee412626cf7d80a8fbb40583e251b947538e[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 14:02:59 2024 +0530
+
+    Test1
+
+[33mcommit 7bddfdaaefa08a6f04c1a995d0c0039884b3796b[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 13:57:14 2024 +0530
+
+    test1
+
+[33mcommit f495bdb355ea1f24b5b1f605bc859c3a41e659c3[m
+Merge: 4eaf017 aa4c165
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 12:46:23 2024 +0530
+
+    Merge branch 'master' of https://github.com/ganesh-d2001/Implementation
+
+[33mcommit aa4c165d36c03aabf42ec2f5c49d66198ca46bab[m
+Author: ganesh-d2001 <ganeshd@devtools.in>
+Date:   Thu Sep 26 12:45:08 2024 +0530
+
+    Delete Main.py
+
+[33mcommit 4eaf017f1cf877f6106fcf5075aec09948c4c76d[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 12:43:34 2024 +0530
+
+    Docker file and main file changes
+
+[33mcommit c35c382cb70f892ee5b7ea9cb05d2a450f146e52[m
+Author: ganesh-d2001 <bhoomikas@devtools.in>
+Date:   Thu Sep 26 12:14:59 2024 +0530
+
+    Chnages in requirment
+
+[33mcommit a9235909bf41164bc6a0339a015f39107284e35a[m
+Author: Bhoomika-DS <bhoomikas@devtools.in>
+Date:   Thu Sep 26 12:02:14 2024 +0530
+
+    Main File Req

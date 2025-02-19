@@ -38,8 +38,8 @@ def connect_to_db():
     return psycopg2.connect(
         host=DB_HOST,
         user=DB_USER,
-        password=POSTGRES_PASSWORD,
-        dbname=DB_NAME,
+        # password=POSTGRES_PASSWORD,
+        # dbname=DB_NAME,
         port=DB_PORT
     )
 def create_prod_database():
