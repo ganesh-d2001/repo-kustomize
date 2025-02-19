@@ -19,7 +19,7 @@ CORS(app)
 DB_HOST = os.getenv('DB_HOST', 'postgresql-db-service')
 DB_USER = os.getenv('DB_USER', 'postgres')
 POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'Test@123')
-DB_NAME = os.getenv('DB_NAME', 'prod')
+DB_NAME = os.getenv('DB_NAME', 'postgres')
 DB_PORT = os.getenv('DB_PORT', '5432')
 
 # Logging setup
@@ -38,8 +38,8 @@ def connect_to_db():
     return psycopg2.connect(
         host=DB_HOST,
         user=DB_USER,
-        # password=POSTGRES_PASSWORD,
-        # dbname=DB_NAME,
+        password=POSTGRES_PASSWORD,
+        dbname=DB_NAME,
         port=DB_PORT
     )
 def create_prod_database():
