@@ -16,7 +16,7 @@ limiter = Limiter(
 CORS(app)
 
 # Fetch database connection details from environment variables
-DB_HOST = os.getenv('DB_HOST', 'postgresql-db-service-test-0')
+DB_HOST = os.getenv('DB_HOST', 'postgresql-db-service-test')
 DB_USER = os.getenv('DB_USER', 'postgres')
 POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'Test@123')
 DB_NAME = os.getenv('DB_NAME', 'test')
