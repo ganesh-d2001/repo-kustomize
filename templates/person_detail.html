@@ -95,7 +95,7 @@
             }
 
             try {
-                const response = await fetch(`http://4.156.53.157:5000/people/${personId}`);
+                const response = await fetch(`http://52.149.200.219:5000/people/${personId}`);
                 
                 // Check if response is OK
                 if (!response.ok) {
@@ -133,7 +133,7 @@
             }
 
             try {
-                const response = await fetch(`http://4.156.53.157:5000/people/search?name=${encodeURIComponent(searchInput)}`);
+                const response = await fetch(`http://52.149.200.219:5000/people/search?name=${encodeURIComponent(searchInput)}`);
                 
                 if (!response.ok) {
                     throw new Error('Error fetching search results');
