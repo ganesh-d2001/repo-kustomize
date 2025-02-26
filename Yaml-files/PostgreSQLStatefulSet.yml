@@ -20,10 +20,10 @@ spec:
       - name: postgresql-db-service-test
         image: postgres:latest
         ports:
-        - containerPort: 5434
+        - containerPort: 5432
           name: post-ser
         volumeMounts:
-        - name: postgresql-db-pvc-test-postgresql-db-service-test-0
+        - name: postgresql-db-pvc-test
           mountPath: /data
         env:
         - name: POSTGRES_PASSWORD
@@ -32,7 +32,7 @@ spec:
           value: /data/pgdata
   volumeClaimTemplates:
   - metadata:
-      name: postgresql-db-pvc-test-postgresql-db-service-test-0
+      name: postgresql-db-pvc-test
     spec:
       accessModes: ["ReadWriteOnce"]
       storageClassName: local-storage
