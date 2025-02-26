@@ -21,7 +21,7 @@ spec:
         image: postgres:latest
         ports:
         - containerPort: 5432
-          name: post-ser
+          name: post-ser-test
         volumeMounts:
         - name: postgresql-db-pvc-test
           mountPath: /data
