@@ -128,9 +128,9 @@
     </form>
 
     <div class="nav-links">
-        <a href="/app/people_data.html">View People Data</a>
-        <a href="/app">Back to Home</a>
-        <a href="/app/people_data.html">Search people</a>
+        <a href="/people_data.html">View People Data</a>
+        <a href="/">Back to Home</a>
+        <a href="/people_data.html">Search people</a>
     </div>
 
     <script>
@@ -147,7 +147,7 @@
             const interests = document.getElementById('interests').value;
 
             try {
-                const response = await fetch('http://172.171.68.90:5000/app/submit', {
+                const response = await fetch('http://4.156.53.157:5000/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

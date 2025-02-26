@@ -17,6 +17,27 @@
             align-items: center;
             color: #fff;
             text-align: center;
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .top-right a {
+            color: #fff;
+            font-size: 1.2em;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .top-right a:hover {
+            background: rgba(0, 0, 0, 0.8);
         }
 
         h1 {
@@ -27,7 +48,7 @@
 
         p {
             font-size: 1.5em;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
@@ -59,22 +80,36 @@
                 font-size: 1.2em;
             }
 
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .button-container a {
                 padding: 10px 20px;
                 font-size: 1em;
+            }
+
+            .top-right a {
+                font-size: 1em;
+                padding: 8px 12px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="top-right">
+        <a href="https://ganeshdchoubey.atlassian.net/wiki/spaces/ProdApp/pages" target="_blank">Application Details for Reference</a>
+    </div>
+
     <h1>Ganesh's DevOps Demo Site</h1>
     <p>Welcome to the world of DevOps tools.</p>
-    <p>Tools used Gitlab CI/CD,Docker Hub,Azure kubernetes, ArgoCD😊 Planning on OD </p>
-    
+    <p>Tools used: GitLab CI/CD, Docker Hub, Azure Kubernetes, Octopus Deploy, ArgoCD 😊</p>
+
     <div class="button-container">
-        <a href="/app/Frontend.html">Add People Data</a>
-        <a href="/app/people_data.html">View People Data</a>
-        <a href="/app/person_detail.html">View Person Detail</a>
+        <a href="/Frontend.html">Add People Data</a>
+        <a href="/people_data.html">View People Data</a>
+        <a href="/person_detail.html">View Person Detail</a>
     </div>
 </body>
 </html>
