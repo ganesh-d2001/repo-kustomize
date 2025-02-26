@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: test-app
-        image: ganeshd2532/test-app:e935f8fcb5c73640c9d9b3e6d38de06f2638696d
+        image: ganeshd2532/test-app:2bf4025ff6dd972bdb20a687b47acf833f2746e0
       imagePullSecrets:
         - name: regcred
   strategy:
