@@ -2,7 +2,6 @@
   kind: Ingress
   metadata:
     name: ingress-stage
-    namespace: stage
     annotations:
       kubernetes.io/ingress.class: nginx
   spec:

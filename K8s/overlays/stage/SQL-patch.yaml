@@ -3,7 +3,6 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: postgresql-db-service-stage
-  namespace: stage
 spec:
   serviceName: postgresql-db-service-stage
   selector:

@@ -3,6 +3,8 @@ resources:
   - ../../base
   - base-service-patch.yaml
   - ingress-stage.yaml
+namespaces:
+  - stage
 patchesStrategicMerge:
   - base-app-patch.yaml
   - SQL-patch.yaml

@@ -2,5 +2,7 @@ resources:
   - ../../base
   - PVC.yaml
   - base-service-patch.yaml
+namespaces:
+  - test
 patchesStrategicMerge:
   - base-app-patch.yaml
