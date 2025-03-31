@@ -22,7 +22,7 @@ spec:
         - containerPort: 5432
           name: post-ser-stage
         volumeMounts:
-        - name: postgresql-db-pvc-test
+        - name: postgresql-db-stage
           mountPath: /data
         env:
         - name: POSTGRES_PASSWORD
