@@ -2,9 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -50,21 +48,3 @@ jobs:
     - name: Push Docker image to private repo
       run: |
         docker push docker.io/ganeshd2532/prod_data:${{ env.TAG }}
-
-    # Load and run Docker image on remote server
-    - name: Load and run Docker image on remote server
-      run: |
-        set -e
-        docker rmi prod_data:${{ env.TAG }} || true
-        docker pull docker.io/ganeshd2532/prod_data:${{ env.TAG }}
-
-    # Update the image in Kubernetes deployment
-    - name: Update Kubernetes deployment
-      run: |
-        kubectl get pods
-        pwd
-        # kubectl apply -f Storage1.yaml
-        # kubectl apply -f PV.yaml
-        # kubectl apply -f pvcpostgres.yaml
-        # kubectl apply -f PostgreSQL StatefulSet.yml
-        kubectl set image deployment/prod-deployment prod-container=ganeshd2532/prod_data:${{ env.TAG }}
