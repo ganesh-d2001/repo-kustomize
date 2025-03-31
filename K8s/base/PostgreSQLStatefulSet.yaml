@@ -16,7 +16,7 @@ spec:
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-      - name: postgresql-db-service-test
+      - name: postgresql-db-service
         image: postgres:latest
         ports:
         - containerPort: 5432
