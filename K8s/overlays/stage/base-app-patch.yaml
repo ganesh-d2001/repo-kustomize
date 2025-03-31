@@ -12,6 +12,3 @@ spec:
     metadata:
       labels:
         app: stage-app
-    spec:
-      containers:
-      - name: stage-app
