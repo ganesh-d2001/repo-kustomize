@@ -2,6 +2,10 @@ resources:
   - PVC.yaml
   - ../../base
   - base-service-patch.yaml
+  - ingress-stage.yaml
 patchesStrategicMerge:
   - base-app-patch.yaml
-
+  - SQL-patch.yaml
+  - str-patch.yaml
+  - sql-ser-patch.yaml
+  - pv-patch.yaml

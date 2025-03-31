@@ -1,0 +1,41 @@
+# PostgreSQL StatefulSet
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgresql-db-service-stage
+  namespace: stage
+spec:
+  serviceName: postgresql-db-service-stage
+  selector:
+    matchLabels:
+      app: postgresql-db-service-stage
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: postgresql-db-service-stage
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: postgresql-db-service-stage
+        image: postgres:latest
+        ports:
+        - containerPort: 5432
+          name: post-ser-stage
+        volumeMounts:
+        - name: postgresql-db-pvc-test
+          mountPath: /data
+        env:
+        - name: POSTGRES_PASSWORD
+          value: Test@123
+        - name: PGDATA
+          value: /data/pgdata
+  volumeClaimTemplates:
+  - metadata:
+      name: postgresql-db-stage
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: local-storage
+      resources:
+        requests:
+          storage: 1Gi

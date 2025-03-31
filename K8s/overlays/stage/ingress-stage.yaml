@@ -1,0 +1,19 @@
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: ingress-stage
+    namespace: stage
+    annotations:
+      kubernetes.io/ingress.class: nginx
+  spec:
+    rules:
+    - host: 128.203.73.82:5000
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: staging-service
+              port:
+                number: 5001
