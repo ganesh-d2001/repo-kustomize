@@ -1,10 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: stage
 resources:
   - PVC.yaml
   - ../../base
   - base-service-patch.yaml
   - ingress-stage.yaml
-namespaces:
-  - stage
 patchesStrategicMerge:
   - base-app-patch.yaml
   - SQL-patch.yaml
