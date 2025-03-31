@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  namespace: stage
+  labels:
+    app: stage-app
+spec:
+  selector:
+    matchLabels:
+      app: stage-app
+  template:
+    metadata:
+      labels:
+        app: stage-app
+    spec:
+      containers:
+      - name: stage-app

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: shared-lb-service
+spec:
+  selector:
+    app: shared-app
+  type: LoadBalancer
+  ports:
+    - name: test
+      port: 5002
+      targetPort: 5002
+    - name: stage
+      port: 5001
+      targetPort: 5001

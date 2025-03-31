@@ -184,7 +184,7 @@ def search_people_by_name():
     except Exception as e:
         logging.error(f'Error searching for person: {str(e)}')
         return jsonify({"status": "error", "message": str(e)}), 500
-    #test
+    #
 
 @app.errorhandler(404)
 def not_found_error(error):

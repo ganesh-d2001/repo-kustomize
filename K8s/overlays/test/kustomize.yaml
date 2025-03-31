@@ -1,0 +1,6 @@
+resources:
+  - ../../base
+  - PVC.yaml
+  - base-service-patch.yaml
+patchesStrategicMerge:
+  - base-app-patch.yaml

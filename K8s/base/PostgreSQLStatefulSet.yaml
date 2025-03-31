@@ -2,18 +2,17 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: postgresql-db-service-test
-  namespace: test
+  name: postgresql-db-service
 spec:
-  serviceName: postgresql-db-service-test
+  serviceName: postgresql-db-service
   selector:
     matchLabels:
-      app: postgresql-db-service-test
+      app: postgresql-db-service
   replicas: 1
   template:
     metadata:
       labels:
-        app: postgresql-db-service-test
+        app: postgresql-db-service
     spec:
       terminationGracePeriodSeconds: 10
       containers:
@@ -23,7 +22,7 @@ spec:
         - containerPort: 5432
           name: post-ser-test
         volumeMounts:
-        - name: postgresql-db-pvc-test
+        - name: postgresql-db-pvc
           mountPath: /data
         env:
         - name: POSTGRES_PASSWORD
@@ -32,7 +31,7 @@ spec:
           value: /data/pgdata
   volumeClaimTemplates:
   - metadata:
-      name: postgresql-db-pvc-test
+      name: postgresql-db
     spec:
       accessModes: ["ReadWriteOnce"]
       storageClassName: local-storage

@@ -1,0 +1,11 @@
+resources:
+  - base-app.yaml
+  - base-service.yaml
+  - shared-LB.yaml
+  - regcred.yaml
+  - storage.yaml
+  - postgress-ser.yaml
+  - PostgreSQLStatefulSet.yaml
+  - PV.yaml
+  - PVC.yaml
+
