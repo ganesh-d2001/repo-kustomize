@@ -22,7 +22,7 @@ spec:
         - containerPort: 5432
           name: post-ser-stage
         volumeMounts:
-        - name: postgresql-db-stage
+        - name: postgresql-db
           mountPath: /data
         env:
         - name: POSTGRES_PASSWORD
@@ -31,7 +31,7 @@ spec:
           value: /data/pgdata
   volumeClaimTemplates:
   - metadata:
-      name: postgresql-db-stage
+      name: postgresql-db
     spec:
       accessModes: ["ReadWriteOnce"]
       storageClassName: local-storage
