@@ -1,6 +1,5 @@
 resources:
   - base-app.yaml
-  - shared-LB.yaml
   - regcred.yaml
   - storage.yaml
   - postgress-ser.yaml

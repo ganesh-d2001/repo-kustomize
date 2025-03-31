@@ -3,3 +3,4 @@ kind: StorageClass
 metadata:
   name: local-storage
   namespace:  stage
+provisioner: kubernetes.io/no-provisioner
